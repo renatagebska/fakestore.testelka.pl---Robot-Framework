@@ -8,7 +8,6 @@
 ### ID: 001
 ### Title: Verify if a new user can successfully complete the registration process using new, correct registration data.
 
-##### Environment: Chrome version 124.0.6367.60, Ubuntu 20.04
 
 #### Steps:
 * Open the Chrome browser.
@@ -34,7 +33,6 @@
 ### ID: 002
 ### Title: Verify if a user can successfully log in using correct login credentials.
 
-##### Environment: Chrome version 124.0.6367.60, Ubuntu 20.04
 
 #### Steps:
 * Open the Chrome browser.
@@ -60,7 +58,6 @@
 ### ID: 003
 ### Title: Verify if a user can successfully add products to the cart.
 
-##### Environment: Chrome version 124.0.6367.60, Ubuntu 20.04
 
 #### Steps:
 * Open the Chrome browser.
@@ -100,7 +97,6 @@
 ### ID: 004
 ### Title: Verify if a user can successfully complete the order checkout process.
 
-##### Environment: Chrome version 124.0.6367.60, Ubuntu 20.04
 
 #### Steps:
 * Repeat steps 1-19 from the previous test case.
