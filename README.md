@@ -4,7 +4,7 @@
 ## Test Cases:
 
 
-### Test Case 001: User Registration Functionality
+### Test Case: User Registration Functionality
 ### ID: 001
 ### Title: Verify if a new user can successfully complete the registration process using new, correct registration data.
 
@@ -30,7 +30,7 @@
 ---
 
 
-### Test Case 002: Login Functionality
+### Test Case: Login Functionality
 ### ID: 002
 ### Title: Verify if a user can successfully log in using correct login credentials.
 
@@ -56,7 +56,7 @@
 ---
 
 
-### Test Case 003: Adding to Cart Functionality
+### Test Case: Adding to Cart Functionality
 ### ID: 003
 ### Title: Verify if a user can successfully add products to the cart.
 
@@ -96,7 +96,7 @@
 ---
 
 
-### Test Case 004: Order Checkout Process
+### Test Case: Order Checkout Process
 ### ID: 004
 ### Title: Verify if a user can successfully complete the order checkout process.
 
