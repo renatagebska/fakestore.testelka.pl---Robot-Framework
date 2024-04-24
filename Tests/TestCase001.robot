@@ -7,8 +7,8 @@ Resource         ../Resources/Keywords/RegistrationKeywords.robot
 User Registration Functionality
     Open Browser To FakeStore Page
     Go to My Account Page
-    Input Registration Email Address    example@example.com
-    Input Registration Password         examplepassword123!
+    Input Registration Email Address    example22@example.com
+    Input Registration Password         example22password123!
     Click on Register button
     Welcome Page Should Be Open
     [Teardown]    Close Browser
