@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-04-24T18:27:22.869444" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests">
+<suite id="s1-s1" name="TestCase001" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests/TestCase001.robot">
+<test id="s1-s1-t1" name="User Registration Functionality" line="7">
+<kw name="Open Browser To FakeStore Page" owner="RegistrationKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:22.971276" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-24T18:27:22.970331" elapsed="2.757562"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-24T18:27:25.728248" elapsed="0.111977"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:25.864997" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-24T18:27:25.840431" elapsed="0.024698"/>
+</kw>
+<status status="PASS" start="2024-04-24T18:27:22.969783" elapsed="2.895468"/>
+</kw>
+<kw name="Go to My Account Page" owner="RegistrationKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:25.866365" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-24T18:27:25.866053" elapsed="1.049589"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:26.924361" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-24T18:27:26.915850" elapsed="0.008607"/>
+</kw>
+<status status="PASS" start="2024-04-24T18:27:25.865763" elapsed="1.058787"/>
+</kw>
+<kw name="Input Registration Email Address" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:26.925519" level="INFO">Typing text 'example223@example.com' into text field 'id=reg_email'.</msg>
+<arg>${REG_EMAIL_INPUT_ID}</arg>
+<arg>${reg_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-24T18:27:26.925326" elapsed="0.132814"/>
+</kw>
+<arg>example223@example.com</arg>
+<status status="PASS" start="2024-04-24T18:27:26.925037" elapsed="0.133224"/>
+</kw>
+<kw name="Input Registration Password" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:27.059279" level="INFO">Typing text 'example223password123!' into text field 'id=reg_password'.</msg>
+<arg>${REG_PASSWORD_INPUT_ID}</arg>
+<arg>${reg_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-24T18:27:27.058990" elapsed="0.232071"/>
+</kw>
+<arg>example223password123!</arg>
+<status status="PASS" start="2024-04-24T18:27:27.058615" elapsed="0.232572"/>
+</kw>
+<kw name="Click on Register button" owner="RegistrationKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:27.292392" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-24T18:27:27.292041" elapsed="0.021039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-24T18:27:27.313444" elapsed="0.029373"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-24T18:27:27.343234" level="INFO">Clicking element 'css=button[name='register'][value='Zarejestruj się']'.</msg>
+<arg>${REG_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-24T18:27:27.343011" elapsed="1.664899"/>
+</kw>
+<status status="PASS" start="2024-04-24T18:27:27.291574" elapsed="1.716994"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="RegistrationKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-24T18:27:29.009660" elapsed="0.015828"/>
+</kw>
+<status status="PASS" start="2024-04-24T18:27:29.009002" elapsed="0.016748"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-24T18:27:29.026788" elapsed="0.058556"/>
+</kw>
+<status status="PASS" start="2024-04-24T18:27:22.969288" elapsed="6.116249"/>
+</test>
+<doc>Test Case: User Registration Functionality
+Title: Verify if a new user can successfully complete the registration process.</doc>
+<status status="PASS" start="2024-04-24T18:27:22.881295" elapsed="6.204761"/>
+</suite>
+<status status="PASS" start="2024-04-24T18:27:22.870203" elapsed="6.216420"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase001">Tests.TestCase001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
