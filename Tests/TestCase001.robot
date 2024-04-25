@@ -9,6 +9,6 @@ User Registration Functionality
     Go to My Account Page
     Input Registration Email Address    example223@example.com
     Input Registration Password         example223password123!
-    Click on Register button
+    Click on Register Button
     Welcome Page Should Be Open
     [Teardown]    Close Browser

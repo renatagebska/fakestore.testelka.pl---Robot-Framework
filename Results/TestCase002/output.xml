@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-04-25T08:27:23.322854" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase002" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests/TestCase002.robot">
+<test id="s1-t1" name="Login Functionality" line="7">
+<kw name="Open Browser To FakeStore Page" owner="LoginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:23.394589" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-25T08:27:23.394392" elapsed="2.089941"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-25T08:27:25.484856" elapsed="0.108311"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:25.597412" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-25T08:27:25.593365" elapsed="0.004132"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:23.393760" elapsed="2.203837"/>
+</kw>
+<kw name="Go to My Account Page" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:25.598749" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T08:27:25.598367" elapsed="1.009952"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:26.625524" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-25T08:27:26.608618" elapsed="0.017078"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:25.598094" elapsed="1.027753"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:26.626785" level="INFO">Typing text 'example223@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${login_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T08:27:26.626584" elapsed="0.153516"/>
+</kw>
+<arg>example223@example.com</arg>
+<status status="PASS" start="2024-04-25T08:27:26.626282" elapsed="0.153938"/>
+</kw>
+<kw name="Input Login password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:26.781012" level="INFO">Typing text 'example223password123!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${login_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T08:27:26.780832" elapsed="0.124115"/>
+</kw>
+<arg>example223password123!</arg>
+<status status="PASS" start="2024-04-25T08:27:26.780574" elapsed="0.124493"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:26.905886" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T08:27:26.905711" elapsed="0.106685"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:26.905447" elapsed="0.107074"/>
+</kw>
+<kw name="Click on Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:27.013796" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-25T08:27:27.013520" elapsed="0.034657"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-25T08:27:27.048408" elapsed="0.031754"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T08:27:27.080596" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T08:27:27.080363" elapsed="1.367311"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:27.013243" elapsed="1.434665"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-25T08:27:28.449484" elapsed="0.019587"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:28.448760" elapsed="0.020435"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-25T08:27:28.469676" elapsed="0.060842"/>
+</kw>
+<status status="PASS" start="2024-04-25T08:27:23.393307" elapsed="5.137534"/>
+</test>
+<doc>Test Case: Login Functionality
+Title: Verify if a user can successfully log in using correct login credentials.</doc>
+<status status="PASS" start="2024-04-25T08:27:23.323390" elapsed="5.208721"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase002">TestCase002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

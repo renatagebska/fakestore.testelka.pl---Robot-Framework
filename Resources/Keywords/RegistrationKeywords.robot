@@ -21,7 +21,7 @@ Input Registration Password
     [Arguments]                          ${reg_password}
     Input Text                           ${REG_PASSWORD_INPUT_ID}    ${reg_password}
 
-Click on Register button
+Click on Register Button
     Execute JavaScript                   window.scrollBy(0, 200);
     Wait Until Element is Visible        ${REG_BUTTON_CSS}    timeout=10s
     Click Element                        ${REG_BUTTON_CSS}

@@ -1,6 +1,6 @@
 *** Variables ***
 
-${BASE_URL}                   https://fakestore.testelka.pl/
+${BASE_URL}                   https://fakestore.testelka.pl
 ${BROWSER}                    Chrome
 
 ${MAIN_PAGE_LINK_ID}          id=menu-item-197
