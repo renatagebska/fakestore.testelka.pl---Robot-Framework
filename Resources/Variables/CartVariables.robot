@@ -1,7 +1,6 @@
 *** Variables ***
 
 ${QUANTITY_INPUT_XPATH}                xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input
-${ADD_TO_CART_BUTTON_XPATH}            xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/button
 
 ${COUPON_CODE_INPUT_ID}                id=coupon_code
 ${APPLY_COUPON_BUTTON_CSS}             css_selector=button[name='apply_coupon'][value='Zastosuj kupon']

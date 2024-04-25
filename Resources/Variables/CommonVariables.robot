@@ -16,8 +16,3 @@ ${ORDER_URL}                  https://fakestore.testelka.pl/zamowienie/
 ${CART_URL}                   https://fakestore.testelka.pl/koszyk/
 ${WISHLIST_URL}               https://fakestore.testelka.pl/wishlist/
 
-${SORT_BY_POPULARITY_URL}     https://fakestore.testelka.pl/product-category/windsurfing/?orderby=popularity
-${SORT_BY_RATING_URL}         https://fakestore.testelka.pl/product-category/windsurfing/?orderby=rating
-${SORT_BY_DATE_URL}           https://fakestore.testelka.pl/product-category/windsurfing/?orderby=date
-${SORT_BY_PRICE_ASC_URL}      https://fakestore.testelka.pl/product-category/windsurfing/?orderby=price
-${SORT_BY_PRICE_DESC_URL}     https://fakestore.testelka.pl/product-category/windsurfing/?orderby=price-desc
