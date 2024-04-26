@@ -19,14 +19,14 @@ ${SAILING_CATEGORY_XPATH}               xpath=//*[@id="main"]/ul/li[4]/a
 ...                           Lanzarote=//*[@id="product-4116"]/div[2]/form/button
 ...                           Sal=//*[@id="product-389"]/div[2]/form/button
 
-&{ADD_CLIMBING_LOCATORS}      Gran_Koscielcow=a[data-product_id='4114']
-...                           Island_Peak=a[data-product_id='42']
-...                           Via_Ferraty=a[data-product_id='40']
+&{ADD_CLIMBING_LOCATORS}      Gran_Koscielcow=//*[@id="product-4114"]/div[2]/form/button
+...                           Island_Peak=//*[@id="product-42"]/div[2]/form/button
+...                           Via_Ferraty=//*[@id="product-40"]/div[2]/form/button
     
-&{ADD_YOGA_LOCATORS}          Japan=a[data-product_id='61']
-...                           Tuscany=a[data-product_id='64']
-...                           Spain=a[data-product_id='60']
-...                           Portugal=a[data-product_id='53']
-...                           Malta=a[data-product_id='62']
+&{ADD_YOGA_LOCATORS}          Japan=//*[@id="product-61"]/div[2]/form/button
+...                           Tuscany=//*[@id="product-64"]/div[2]/form/button
+...                           Spain=//*[@id="product-60"]/div[2]/form/button
+...                           Portugal=//*[@id="product-53"]/div[2]/form/button
+...                           Malta=//*[@id="product-62"]/div[2]/form/button
 
-&{ADD_SAILING_LOCATORS}       Masuria=a[data-product_id='46']
+&{ADD_SAILING_LOCATORS}       Masuria=//*[@id="product-46"]/div[2]/form/button

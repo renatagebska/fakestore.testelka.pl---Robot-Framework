@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library    Collections
+Library     Collections
 Resource    ../Variables/CartVariables.robot
 Resource    ../Variables/ProductsVariables.robot
 Resource    CommonKeywords.robot
@@ -45,16 +45,58 @@ Clear and Enter Quantity
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${EMPTY}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${quantity}
 
-Add Windsurfing Product To Cart
-    ${locations}=    Get Dictionary Keys    ${ADD_WINDSERFING_LOCATORS}
-    FOR    ${location}    IN    @{locations}
-        ${windserfing_locator}=    Get From Dictionary    ${ADD_WINDSERFING_LOCATORS}    ${location}
+Add Windsurfing Products To Cart
+    ${windserfing_locations}=    Get Dictionary Keys    ${ADD_WINDSERFING_LOCATORS}
+    FOR    ${windserfing_location}    IN    @{windserfing_locations}
+        ${windserfing_locator}=    Get From Dictionary    ${ADD_WINDSERFING_LOCATORS}    ${windserfing_location}
         ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${windserfing_locator}    timeout=10s
         IF    '${button_visible}' == 'True'
             Click Element    ${windserfing_locator}
-            Log    Added '${location}' to cart.
+            Log    Added '${windserfing_location}' to cart.
             Exit For Loop
         ELSE
-            Log    Element '${location}' not visible after 10 seconds.
+            Log    Element '${windserfing_location}' not visible after 10 seconds.
+        END
+    END
+
+Add Climbing Products To Cart
+    ${climbing_locations}=   Get Dictionary Keys     ${ADD_CLIMBING_LOCATORS}
+    FOR    ${climbing_location}    IN     @{climbing_locations}
+        ${climbing_locator}=    Get From Dictionary     ${ADD_CLIMBING_LOCATORS}    ${climbing_location}
+        ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${climbing_locator}     timeout=10s
+        IF    '${button_visible}' == 'True'
+            Click Element    ${climbing_locator}
+            Log    Added '${climbing_location}' to cart.
+            Exit For Loop
+        ELSE
+            Log    Element '${climbing_location}' not visible after 10 seconds.
+        END
+    END
+
+Add Yoga Products To Cart
+    ${yoga_locations}=   Get Dictionary Keys     ${ADD_YOGA_LOCATORS}
+    FOR    ${yoga_location}    IN     @{yoga_locations}
+        ${yoga_locator}=    Get From Dictionary     ${ADD_YOGA_LOCATORS}    ${yoga_location}
+        ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${yoga_locator}     timeout=10s
+        IF    '${button_visible}' == 'True'
+            Click Element    ${yoga_locator}
+            Log    Added '${yoga_location}' to cart.
+            Exit For Loop
+        ELSE
+            Log    Element '${yoga_location}' not visible after 10 seconds.
+        END
+    END
+
+Add Sailing Products To Cart
+    ${sailing_locations}=   Get Dictionary Keys     ${ADD_SAILING_LOCATORS}
+    FOR    ${sailing_location}    IN     @{sailing_locations}
+        ${sailing_locator}=    Get From Dictionary     ${ADD_SAILING_LOCATORS}    ${sailing_location}
+        ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${sailing_locator}     timeout=10s
+        IF    '${button_visible}' == 'True'
+            Click Element    ${sailing_locator}
+            Log    Added '${sailing_location}' to cart.
+            Exit For Loop
+        ELSE
+            Log    Element '${sailing_location}' not visible after 10 seconds.
         END
     END
