@@ -11,22 +11,26 @@ Click On Windsurfing Category
     Wait Until Element is Visible            ${WINDSURFING_CATEGORY_XPATH}  
     Click Element                            ${WINDSURFING_CATEGORY_XPATH}  
     Title Should Be                          Windsurfing – FakeStore
+    Location Should Be                       ${WINDSERFING_URL}
 
 Click On Climbing Category
     Wait Until Element is Visible            ${CLIMBING_CATEGORY_XPATH}
     Click Element                            ${CLIMBING_CATEGORY_XPATH}
     Title Should Be                          Wspinaczka – FakeStore
+    Location Should Be                       ${CLIMBING_URL}
 
 Click On Yoga Category
     Wait Until Element is Visible            ${YOGA_CATEGORY_XPATH}
     Click Element                            ${YOGA_CATEGORY_XPATH}
     Title Should Be                          Yoga i pilates – FakeStore
+    Location Should Be                       ${YOGA_URL}
 
 Click On Sailing Category
     Execute JavaScript                       window.scrollBy(0, 200);
     Wait Until Element is Visible            ${SAILING_CATEGORY_XPATH}    timeout=10s
     Click Element                            ${SAILING_CATEGORY_XPATH}
-    Title Should Be                          Żeglarstwo – FakeStore 
+    Title Should Be                          Żeglarstwo – FakeStore
+    Location Should Be                       ${SAILING_URL}
 
 Select Product By Order
     [Arguments]                             ${select_option}

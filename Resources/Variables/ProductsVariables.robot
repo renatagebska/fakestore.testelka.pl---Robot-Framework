@@ -5,6 +5,11 @@ ${CLIMBING_CATEGORY_XPATH}              xpath=//*[@id="main"]/ul/li[2]/a
 ${YOGA_CATEGORY_XPATH}                  xpath=//*[@id="main"]/ul/li[3]/a
 ${SAILING_CATEGORY_XPATH}               xpath=//*[@id="main"]/ul/li[4]/a
 
+${WINDSERFING_URL}                      https://fakestore.testelka.pl/product-category/windsurfing/
+${CLIMBING_URL}                         https://fakestore.testelka.pl/product-category/wspinaczka/
+${YOGA_URL}                             https://fakestore.testelka.pl/product-category/yoga-i-pilates/
+${SAILING_URL}                          https://fakestore.testelka.pl/product-category/zeglarstwo/
+
 &{SELECT_PRODUCT_LOCATORS}    first_product=//*[@id="main"]/ul/li[1]/a[1]
 ...                           second_product=//*[@id="main"]/ul/li[2]/a[1]
 ...                           third_product=//*[@id="main"]/ul/li[3]/a[1]

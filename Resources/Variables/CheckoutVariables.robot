@@ -11,9 +11,9 @@ ${BILLING_CITY_INPUT_ID}              id=billing_city
 ${BILLING_PHONE_INPUT_ID}             id=billing_phone
 ${BILLING_EMAIL_INPUT_ID}             id=billing_email
 
-${BILLING_CARD_NUMBER_INPUT_CSS}      css=#stripe-card-element input.input
-${BILLING_CARD_EXPIRY_INPUT_CSS}      css=#stripe-exp-element input.input
-${BILLING_CARD_CVC_INPUT_CSS}         css=#stripe-cvc-element input.input
+${BILLING_CARD_NUMBER_INPUT_CSS}      css=input[name="cardnumber"]
+${BILLING_CARD_EXPIRY_INPUT_CSS}      css=input[name="exp-date"]
+${BILLING_CARD_CVC_INPUT_CSS}         css=input[name="cvc"]
 
 ${BILLING_TERMS_INPUT_ID}             id=terms
 ${BILLING_PLACE_ORDER_BUTTON_ID}      id=place_order
