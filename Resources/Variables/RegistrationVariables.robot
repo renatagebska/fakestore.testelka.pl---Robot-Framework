@@ -7,5 +7,6 @@ ${REG_BUTTON_CSS}             css=button[name='register'][value='Zarejestruj siÄ
 ${email_prefix}               example
 ${email_domain}               example.com
 ${password_length}            10
+${random_string_length}       4
 ${global_email}
 ${global_password}

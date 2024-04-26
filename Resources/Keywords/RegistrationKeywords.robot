@@ -24,7 +24,7 @@ Welcome Page Should Be Open
     Wait Until Page Contains             Witaj
 
 Generate Random Email and Password
-    ${random_string}=  Generate Random String  ${password_length}
+    ${random_string}=  Generate Random String  ${random_string_length}
     ${global_password}=  Generate Random Password
     ${global_email}=   Set Variable  ${email_prefix}_${random_string}@${email_domain}
     Log  Random Email: ${global_email}
