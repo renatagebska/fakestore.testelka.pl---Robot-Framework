@@ -100,7 +100,7 @@
 
 
 #### Steps:
-* * Open the Chrome browser.
+* Open the Chrome browser.
 * Maximize the window.
 * Go to the website: https://fakestore.testelka.pl/
 * Locate and click on the "Shop" link.
