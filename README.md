@@ -75,6 +75,7 @@
 * Locate the "Yoga and Pilates" link.
 * Locate the sorting window and sort the products by price: from lowest.
 * Click on the second displayed product.
+* Locate and click on the quantity input field.
 * Clear the quantity input field.
 * Enter quantity 2.
 * Click on the "Add to Cart" button.
@@ -99,7 +100,25 @@
 
 
 #### Steps:
-* Repeat steps 1-19 from the previous test case.
+* * Open the Chrome browser.
+* Maximize the window.
+* Go to the website: https://fakestore.testelka.pl/
+* Locate and click on the "Shop" link.
+* Locate the "Windsurfing" link.
+* Locate the sorting window and sort the products by date.
+* Click on the third displayed product.
+* Locate and click on the quantity input field.
+* Clear the quantity input field.
+* Enter quantity 2.
+* Click on the "Add to Cart" button.
+* Locate and click on the "Shop" link.
+* Locate the "Sailing" link.
+* Click on the first displayed product.
+* Locate and click on the quantity input field.
+* Clear the quantity input field.
+* Enter quantity 3.
+* Click on the "Add to Cart" button.
+* Locate and click on the "Cart" link.
 * Locate and clear the "Coupon Code" field. Enter the code 10percent.
 * Locate and click on the "Apply Coupon" button.
 * Locate and click on the "Proceed to Checkout" button.
@@ -108,9 +127,8 @@
 * Close the browser.
 
 #### Expected Results:
-* After steps 1-19: Same as in test case 003.
-* After steps 20-21: After entering the coupon code and clicking the "Apply Coupon" button, the expected result is the application of the coupon and any changes to the cart or order price.
-* After steps 22-23: Proceed to the payment section, where the user should enter correct payment details and credit card information.
-* After step 24: The user should receive an order confirmation and be redirected to the order confirmation page.
-* After step 25: The browser is closed.
+* After steps 19-20: After entering the coupon code and clicking the "Apply Coupon" button, the expected result is the application of the coupon and any changes to the cart or order price.
+* After steps 21-22: Proceed to the payment section, where the user should enter correct payment details and credit card information.
+* After step 23: The user should receive an order confirmation and be redirected to the order confirmation page.
+* After step 24: The browser is closed.
 ---
