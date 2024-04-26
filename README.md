@@ -64,7 +64,7 @@
 * Maximize the window.
 * Go to the website: https://fakestore.testelka.pl/
 * Locate and click on the "Shop" link.
-* Locate the "Climbing" link.
+* Locate and click the "Climbing" link.
 * Locate the sorting window and sort the products by popularity.
 * Click on the first displayed product.
 * Locate and click on the quantity input field.
@@ -72,7 +72,7 @@
 * Enter quantity 1.
 * Click on the "Add to Cart" button.
 * Locate and click on the "Shop" link.
-* Locate the "Yoga and Pilates" link.
+* Locate and click the "Yoga and Pilates" link.
 * Locate the sorting window and sort the products by price: from lowest.
 * Click on the second displayed product.
 * Locate and click on the quantity input field.
@@ -104,7 +104,7 @@
 * Maximize the window.
 * Go to the website: https://fakestore.testelka.pl/
 * Locate and click on the "Shop" link.
-* Locate the "Windsurfing" link.
+* Locate and click the "Windsurfing" link.
 * Locate the sorting window and sort the products by date.
 * Click on the third displayed product.
 * Locate and click on the quantity input field.
@@ -112,7 +112,7 @@
 * Enter quantity 2.
 * Click on the "Add to Cart" button.
 * Locate and click on the "Shop" link.
-* Locate the "Sailing" link.
+* Locate and click the "Sailing" link.
 * Click on the first displayed product.
 * Locate and click on the quantity input field.
 * Clear the quantity input field.
@@ -132,3 +132,55 @@
 * After step 23: The user should receive an order confirmation and be redirected to the order confirmation page.
 * After step 24: The browser is closed.
 ---
+
+
+
+### Test Case: Product Sorting Functionality
+### ID: 005
+### Title: Verify if a user can successfully sort Climbing products.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Go to the website: https://fakestore.testelka.pl/
+* Locate and click on the "Shop" link.
+* Locate and click the "Climbing" link.
+* Check menu-order sorting:
+  - Click sorting element.
+  - Ensure "Menu Order" is selected.
+  - Compare results order with expected.
+*  Sort by popularity:
+  - Click sorting element.
+  - Choose "Sort by popularity".
+  - Verify results are sorted by popularity.
+* Sort by rating:
+  - Click sorting element.
+  - Select "Sort by average rating".
+  - Confirm results are sorted by product rating.
+* Sort by newness:
+  - Click sorting element.
+  - Opt for "Sort by newness".
+  - Validate results are sorted by product addition date, newest first.
+* Sort by price (lowest to highest):
+  - Click sorting element.
+  - Pick "Sort by price: low to high".
+  - Ensure results are sorted by price, lowest first.
+* Sort by price (highest to lowest):
+  - Click sorting element.
+  - Choose "Sort by price: high to low".
+  - Confirm results are sorted by price, highest first.
+* Close the browser.
+
+#### Expected Results:
+* Menu-order sorting:
+  - The products should be displayed according to the default menu order set by the website administrators. Ensure that the order matches the expected arrangement specified by the website's administrators.
+* Sort by popularity:
+  - After selecting "Sort by popularity," the products should be rearranged based on their popularity, with the most popular products displayed first.
+* Sort by rating:
+  - Upon selecting "Sort by average rating," the products should be reordered according to their average rating, with the highest-rated products listed first.
+* Sort by newness:
+  - When opting for "Sort by newness," the products should be sorted based on their addition date, with the newest products appearing at the beginning of the list.
+* Sort by price (lowest to highest):
+  - After selecting "Sort by price: low to high," the products should be sorted in ascending order of price, with the lowest-priced products listed first.
+* Sort by price (highest to lowest):
+  - Upon choosing "Sort by price: high to low," the products should be arranged in descending order of price, with the highest-priced products displayed first.
