@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 Resource    ../Variables/CommonVariables.robot
 
-** Keywords ***
+*** Keywords ***
 
 Open Browser To FakeStore Page
     Open Browser                         ${BASE_URL}    ${BROWSER}

@@ -10,9 +10,8 @@ Test Sprawdzajacy
     Go To Shop Page
     Click On Windsurfing Category
     Locate Sorting Box
-    Select Sort Option         popularity
-    Select Product By Order    fourth_product 
+    Select Sort Option  date
+    Select Product By Order    first_product
     Locate and Click Quantity Input Field    
     Clear and Enter Quantity    2
-    Add Windserfing Product To Cart    ${ADD_WINDSERFING_LOCATORS}
-    [Teardown]    Close Browser   
+    Add Windsurfing Product To Cart

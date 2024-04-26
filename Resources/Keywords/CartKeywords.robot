@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 Library    Collections
 Resource    ../Variables/CartVariables.robot
 Resource    ../Variables/ProductsVariables.robot
-Resource    ../CommonKeywords.robot
+Resource    CommonKeywords.robot
 
 *** Keywords ***
 
@@ -45,13 +45,16 @@ Clear and Enter Quantity
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${EMPTY}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${quantity}
 
-Add Windserfing Product To Cart
-    [Arguments]    ${windserfing_locations}
-    FOR    ${location}    IN    @{windserfing_locations}
-        ${windserfing_locator}    Collections.Get From Dictionary    ${ADD_WINDSERFING_LOCATORS}    ${location}
-        Run Keyword If    '${windserfing_locator}' != 'None'
-        ...    Wait Until Element is Visible     ${windserfing_locator}    timeout=10s
-        ...  ELSE
-        ...    Log    No locator found for windserfing product at location: ${location}
+Add Windsurfing Product To Cart
+    ${locations}=    Get Dictionary Keys    ${ADD_WINDSERFING_LOCATORS}
+    FOR    ${location}    IN    @{locations}
+        ${windserfing_locator}=    Get From Dictionary    ${ADD_WINDSERFING_LOCATORS}    ${location}
+        ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${windserfing_locator}    timeout=10s
+        IF    '${button_visible}' == 'True'
+            Click Element    ${windserfing_locator}
+            Log    Added '${location}' to cart.
+            Exit For Loop
+        ELSE
+            Log    Element '${location}' not visible after 10 seconds.
         END
-   
+    END
