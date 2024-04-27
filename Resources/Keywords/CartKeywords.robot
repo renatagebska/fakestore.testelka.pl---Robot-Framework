@@ -12,18 +12,21 @@ Click On Windsurfing Category
     Click Element                            ${WINDSURFING_CATEGORY_XPATH}  
     Title Should Be                          Windsurfing – FakeStore
     Location Should Be                       ${WINDSERFING_URL}
+    Log    Clicked on Windsurfing Category
 
 Click On Climbing Category
     Wait Until Element is Visible            ${CLIMBING_CATEGORY_XPATH}
     Click Element                            ${CLIMBING_CATEGORY_XPATH}
     Title Should Be                          Wspinaczka – FakeStore
     Location Should Be                       ${CLIMBING_URL}
+    Log    Clicked on Climbing Category
 
 Click On Yoga Category
     Wait Until Element is Visible            ${YOGA_CATEGORY_XPATH}
     Click Element                            ${YOGA_CATEGORY_XPATH}
     Title Should Be                          Yoga i pilates – FakeStore
     Location Should Be                       ${YOGA_URL}
+    Log    Clicked on Yoga Category
 
 Click On Sailing Category
     Execute JavaScript                       window.scrollBy(0, 200);
@@ -31,12 +34,14 @@ Click On Sailing Category
     Click Element                            ${SAILING_CATEGORY_XPATH}
     Title Should Be                          Żeglarstwo – FakeStore
     Location Should Be                       ${SAILING_URL}
+    Log    Clicked on Sailing Category
 
 Select Product By Order
     [Arguments]                             ${select_option}
     ${product_locator} =    Collections.Get From Dictionary    ${SELECT_PRODUCT_LOCATORS}    ${select_option}
     Run Keyword If    '${product_locator}' != 'None'    
     ...    Click Element    ${product_locator}
+    ...    Log    Selected: ${select_option}
     ...  ELSE
     ...    Log    No locator found for option: ${select_option}
     ...    Scroll Page Down If Element Not Visible    ${product_locator}
@@ -48,6 +53,7 @@ Clear and Enter Quantity
     [Arguments]                             ${quantity}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${EMPTY}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${quantity}
+    Log     Entered quantity:   ${quantity}
 
 Add Windsurfing Products To Cart
     ${windserfing_locations}=    Get Dictionary Keys    ${ADD_WINDSERFING_LOCATORS}

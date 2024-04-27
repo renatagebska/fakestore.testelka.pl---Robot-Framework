@@ -28,4 +28,3 @@ Order Checkout Process
     Locate and Apply Coupon Code    0
     Click Process To Checkout Button
     Fill In Payments Details    1   1   1   1   1   1   1
-    Fill In Card Details

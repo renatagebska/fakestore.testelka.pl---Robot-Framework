@@ -31,8 +31,8 @@ Login Functionality Test 3
     [Tags]  login
     Open Browser To FakeStore Page
     Go To My Account Page
-    Input Login Email Address    3
-    Input Login password         3
+    Input Login Email Address    0
+    Input Login password         0
     Check Remember Me Box
     Click On Login Button
     Welcome Page Should Be Open

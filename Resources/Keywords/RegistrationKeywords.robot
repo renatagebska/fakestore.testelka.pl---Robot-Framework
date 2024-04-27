@@ -10,10 +10,12 @@ Resource    ../Variables/RegistrationVariables.robot
 Input Registration Email Address
     [Arguments]                          ${reg_email}
     Input Text                           ${REG_EMAIL_INPUT_ID}    ${reg_email}
+    Log   Entered Registration Email:    ${reg_email}
 
 Input Registration Password
     [Arguments]                          ${reg_password}
     Input Text                           ${REG_PASSWORD_INPUT_ID}    ${reg_password}
+    Log   Entered Registration Password: ${reg_password}
 
 Click On Register Button
     Execute JavaScript                   window.scrollBy(0, 200);
