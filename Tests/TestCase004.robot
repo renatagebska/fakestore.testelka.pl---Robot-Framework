@@ -8,6 +8,7 @@ Resource        ../Resources/Keywords/CheckoutKeywords.robot
 
 *** Test Cases ***
 Order Checkout Process
+    [Tags]  checkout
     Open Browser To FakeStore Page
     Go To Shop Page
     Click On Windsurfing Category
