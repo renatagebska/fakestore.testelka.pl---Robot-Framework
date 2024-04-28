@@ -41,7 +41,6 @@ Select Product By Order
     ${product_locator} =    Collections.Get From Dictionary    ${SELECT_PRODUCT_LOCATORS}    ${select_option}
     Run Keyword If    '${product_locator}' != 'None'    
     ...    Click Element    ${product_locator}
-    ...    Log    Selected: ${select_option}
     ...  ELSE
     ...    Log    No locator found for option: ${select_option}
     ...    Scroll Page Down If Element Not Visible    ${product_locator}
@@ -53,7 +52,6 @@ Clear and Enter Quantity
     [Arguments]                             ${quantity}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${EMPTY}
     Input Text                              ${QUANTITY_INPUT_XPATH}    ${quantity}
-    Log     Entered quantity:   ${quantity}
 
 Add Windsurfing Products To Cart
     ${windserfing_locations}=    Get Dictionary Keys    ${ADD_WINDSERFING_LOCATORS}
@@ -62,7 +60,6 @@ Add Windsurfing Products To Cart
         ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${windserfing_locator}    timeout=10s
         IF    '${button_visible}' == 'True'
             Click Element    ${windserfing_locator}
-            Log    Added '${windserfing_location}' to cart.
             Exit For Loop
         ELSE
             Log    Element '${windserfing_location}' not visible after 10 seconds.
@@ -76,7 +73,6 @@ Add Climbing Products To Cart
         ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${climbing_locator}     timeout=10s
         IF    '${button_visible}' == 'True'
             Click Element    ${climbing_locator}
-            Log    Added '${climbing_location}' to cart.
             Exit For Loop
         ELSE
             Log    Element '${climbing_location}' not visible after 10 seconds.
@@ -90,7 +86,6 @@ Add Yoga Products To Cart
         ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${yoga_locator}     timeout=10s
         IF    '${button_visible}' == 'True'
             Click Element    ${yoga_locator}
-            Log    Added '${yoga_location}' to cart.
             Exit For Loop
         ELSE
             Log    Element '${yoga_location}' not visible after 10 seconds.
@@ -104,7 +99,6 @@ Add Sailing Products To Cart
         ${button_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${sailing_locator}     timeout=10s
         IF    '${button_visible}' == 'True'
             Click Element    ${sailing_locator}
-            Log    Added '${sailing_location}' to cart.
             Exit For Loop
         ELSE
             Log    Element '${sailing_location}' not visible after 10 seconds.

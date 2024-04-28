@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-28T14:52:36.822393" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase001" source="C:\Users\Renata\PycharmProjects\fakestore.testelka.pl---Robot-Framework\Tests\TestCase001.robot">
+<test id="s1-t1" name="User Registration Functionality Test 1" line="8">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:36.967755" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:36.966776" elapsed="2.893649"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-28T14:52:39.860941" elapsed="0.016942"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:39.881388" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:39.877883" elapsed="0.003505"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:36.966776" elapsed="2.914612"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:39.882370" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:39.882370" elapsed="1.069234"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:40.955516" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.951604" elapsed="0.004882"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:40.960492" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.956486" elapsed="0.004006"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.960492" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.960492" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:39.882370" elapsed="1.078122"/>
+</kw>
+<kw name="Generate Random Email and Password" owner="RegistrationKeywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-04-28T14:52:40.961473" level="INFO">${random_string} = qpis</msg>
+<var>${random_string}</var>
+<arg>${random_string_length}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.961473" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random Password" owner="RegistrationKeywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.961473" level="INFO">${upper_case} = ABCDEFGHIJKLMNOPQRSTUVWXYZ</msg>
+<var>${upper_case}</var>
+<arg>ABCDEFGHIJKLMNOPQRSTUVWXYZ</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.961473" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.962451" level="INFO">${lower_case} = abcdefghijklmnopqrstuvwxyz</msg>
+<var>${lower_case}</var>
+<arg>abcdefghijklmnopqrstuvwxyz</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.961473" elapsed="0.000978"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.962451" level="INFO">${digits} = 0123456789</msg>
+<var>${digits}</var>
+<arg>0123456789</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.962451" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.962451" level="INFO">${special_chars} = !"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${special_chars}</var>
+<arg>!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.962451" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.962451" level="INFO">${all_chars} = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${all_chars}</var>
+<arg>${upper_case}${lower_case}${digits}${special_chars}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.962451" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.963427" level="INFO">${random_password} = _pW'X9P&amp;4&gt;</msg>
+<var>${random_password}</var>
+<arg>''.join(random.sample($all_chars, ${password_length}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.962451" elapsed="0.000976"/>
+</kw>
+<return>
+<value>${random_password}</value>
+<status status="PASS" start="2024-04-28T14:52:40.963427" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:40.963427" level="INFO">${global_password} = _pW'X9P&amp;4&gt;</msg>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:40.961473" elapsed="0.001954"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.963427" level="INFO">${global_email} = example_qpis@example.com</msg>
+<var>${global_email}</var>
+<arg>${email_prefix}_${random_string}@${email_domain}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.963427" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.963427" level="INFO">Random Email: example_qpis@example.com</msg>
+<arg>Random Email: ${global_email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.963427" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:40.963427" level="INFO">Random Password: _pW'X9P&amp;4&gt;</msg>
+<arg>Random Password: ${global_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.963427" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${global_email}</value>
+<value>${global_password}</value>
+<status status="PASS" start="2024-04-28T14:52:40.963427" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:40.963427" level="INFO">${global_email} = example_qpis@example.com</msg>
+<msg time="2024-04-28T14:52:40.963427" level="INFO">${global_password} = _pW'X9P&amp;4&gt;</msg>
+<var>${global_email}</var>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:40.961473" elapsed="0.001954"/>
+</kw>
+<kw name="Input Registration Email Address" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:40.964403" level="INFO">Typing text 'example_qpis@example.com' into text field 'id=reg_email'.</msg>
+<arg>${REG_EMAIL_INPUT_ID}</arg>
+<arg>${reg_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:40.964403" elapsed="0.077362"/>
+</kw>
+<arg>${global_email}</arg>
+<status status="PASS" start="2024-04-28T14:52:40.964403" elapsed="0.077362"/>
+</kw>
+<kw name="Input Registration Password" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:41.042741" level="INFO">Typing text '_pW'X9P&amp;4&gt;' into text field 'id=reg_password'.</msg>
+<arg>${REG_PASSWORD_INPUT_ID}</arg>
+<arg>${reg_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:41.042741" elapsed="0.056683"/>
+</kw>
+<arg>${global_password}</arg>
+<status status="PASS" start="2024-04-28T14:52:41.042741" elapsed="0.056683"/>
+</kw>
+<kw name="Click On Register Button" owner="RegistrationKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:41.099424" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-28T14:52:41.099424" elapsed="0.004473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-28T14:52:41.103897" elapsed="0.016712"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:41.120609" level="INFO">Clicking element 'css=button[name='register'][value='Zarejestruj się']'.</msg>
+<arg>${REG_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:41.120609" elapsed="1.556554"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:41.099424" elapsed="1.577739"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="RegistrationKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-28T14:52:42.678138" elapsed="0.007397"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:42.677163" elapsed="0.008372"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-28T14:52:42.686523" elapsed="2.069813"/>
+</kw>
+<tag>registration</tag>
+<status status="PASS" start="2024-04-28T14:52:36.965798" elapsed="7.790538"/>
+</test>
+<test id="s1-t2" name="User Registration Functionality Test 2" line="19">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:44.758826" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:44.757843" elapsed="3.147801"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-28T14:52:47.905644" elapsed="0.016726"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:47.928262" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:47.922370" elapsed="0.005892"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:44.757843" elapsed="3.170419"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:47.929239" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:47.929239" elapsed="0.864064"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.796237" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.793303" elapsed="0.003910"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.799166" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.797213" elapsed="0.001953"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.800169" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.800169" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:47.929239" elapsed="0.870930"/>
+</kw>
+<kw name="Generate Random Email and Password" owner="RegistrationKeywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-04-28T14:52:48.800169" level="INFO">${random_string} = 3UWG</msg>
+<var>${random_string}</var>
+<arg>${random_string_length}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.800169" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random Password" owner="RegistrationKeywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.801149" level="INFO">${upper_case} = ABCDEFGHIJKLMNOPQRSTUVWXYZ</msg>
+<var>${upper_case}</var>
+<arg>ABCDEFGHIJKLMNOPQRSTUVWXYZ</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.801149" level="INFO">${lower_case} = abcdefghijklmnopqrstuvwxyz</msg>
+<var>${lower_case}</var>
+<arg>abcdefghijklmnopqrstuvwxyz</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.801149" level="INFO">${digits} = 0123456789</msg>
+<var>${digits}</var>
+<arg>0123456789</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.801149" level="INFO">${special_chars} = !"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${special_chars}</var>
+<arg>!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.801149" level="INFO">${all_chars} = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${all_chars}</var>
+<arg>${upper_case}${lower_case}${digits}${special_chars}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.802126" level="INFO">${random_password} = *I]cf9P8nh</msg>
+<var>${random_password}</var>
+<arg>''.join(random.sample($all_chars, ${password_length}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.801149" elapsed="0.000977"/>
+</kw>
+<return>
+<value>${random_password}</value>
+<status status="PASS" start="2024-04-28T14:52:48.802126" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:48.802126" level="INFO">${global_password} = *I]cf9P8nh</msg>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:48.800169" elapsed="0.001957"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.802126" level="INFO">${global_email} = example_3UWG@example.com</msg>
+<var>${global_email}</var>
+<arg>${email_prefix}_${random_string}@${email_domain}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.802126" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.802126" level="INFO">Random Email: example_3UWG@example.com</msg>
+<arg>Random Email: ${global_email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.802126" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:48.802126" level="INFO">Random Password: *I]cf9P8nh</msg>
+<arg>Random Password: ${global_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.802126" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${global_email}</value>
+<value>${global_password}</value>
+<status status="PASS" start="2024-04-28T14:52:48.802126" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:48.802126" level="INFO">${global_email} = example_3UWG@example.com</msg>
+<msg time="2024-04-28T14:52:48.802126" level="INFO">${global_password} = *I]cf9P8nh</msg>
+<var>${global_email}</var>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:48.800169" elapsed="0.001957"/>
+</kw>
+<kw name="Input Registration Email Address" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.803629" level="INFO">Typing text 'example_3UWG@example.com' into text field 'id=reg_email'.</msg>
+<arg>${REG_EMAIL_INPUT_ID}</arg>
+<arg>${reg_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.803629" elapsed="0.082491"/>
+</kw>
+<arg>${global_email}</arg>
+<status status="PASS" start="2024-04-28T14:52:48.803629" elapsed="0.082491"/>
+</kw>
+<kw name="Input Registration Password" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.887102" level="INFO">Typing text '*I]cf9P8nh' into text field 'id=reg_password'.</msg>
+<arg>${REG_PASSWORD_INPUT_ID}</arg>
+<arg>${reg_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.887102" elapsed="0.054105"/>
+</kw>
+<arg>${global_password}</arg>
+<status status="PASS" start="2024-04-28T14:52:48.886120" elapsed="0.055087"/>
+</kw>
+<kw name="Click On Register Button" owner="RegistrationKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.942185" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.942185" elapsed="0.003907"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.946092" elapsed="0.018196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:48.964288" level="INFO">Clicking element 'css=button[name='register'][value='Zarejestruj się']'.</msg>
+<arg>${REG_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:48.964288" elapsed="1.447906"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:48.942185" elapsed="1.470009"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="RegistrationKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-28T14:52:50.412194" elapsed="0.008375"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:50.412194" elapsed="0.008375"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-28T14:52:50.421552" elapsed="2.070764"/>
+</kw>
+<tag>registration</tag>
+<status status="PASS" start="2024-04-28T14:52:44.756336" elapsed="7.735980"/>
+</test>
+<test id="s1-t3" name="User Registration Functionality Test 3" line="30">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:52.494270" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:52.493295" elapsed="2.798967"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-28T14:52:55.292262" elapsed="0.017134"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:55.312876" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:55.309396" elapsed="0.004456"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:52.493295" elapsed="2.820557"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:55.313852" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:55.313852" elapsed="1.017505"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.335269" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.331357" elapsed="0.003912"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.339209" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.335269" elapsed="0.003940"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.339209" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.339209" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:55.313852" elapsed="1.025357"/>
+</kw>
+<kw name="Generate Random Email and Password" owner="RegistrationKeywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-04-28T14:52:56.340213" level="INFO">${random_string} = Sf3o</msg>
+<var>${random_string}</var>
+<arg>${random_string_length}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.340213" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random Password" owner="RegistrationKeywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.340213" level="INFO">${upper_case} = ABCDEFGHIJKLMNOPQRSTUVWXYZ</msg>
+<var>${upper_case}</var>
+<arg>ABCDEFGHIJKLMNOPQRSTUVWXYZ</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.340213" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.341194" level="INFO">${lower_case} = abcdefghijklmnopqrstuvwxyz</msg>
+<var>${lower_case}</var>
+<arg>abcdefghijklmnopqrstuvwxyz</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.340213" elapsed="0.000981"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.341194" level="INFO">${digits} = 0123456789</msg>
+<var>${digits}</var>
+<arg>0123456789</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.341194" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.341194" level="INFO">${special_chars} = !"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${special_chars}</var>
+<arg>!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.341194" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.341194" level="INFO">${all_chars} = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_`{|}~</msg>
+<var>${all_chars}</var>
+<arg>${upper_case}${lower_case}${digits}${special_chars}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.341194" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.341194" level="INFO">${random_password} = 3p(VPi`dR1</msg>
+<var>${random_password}</var>
+<arg>''.join(random.sample($all_chars, ${password_length}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.341194" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${random_password}</value>
+<status status="PASS" start="2024-04-28T14:52:56.341194" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:56.342171" level="INFO">${global_password} = 3p(VPi`dR1</msg>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:56.340213" elapsed="0.001958"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.342171" level="INFO">${global_email} = example_Sf3o@example.com</msg>
+<var>${global_email}</var>
+<arg>${email_prefix}_${random_string}@${email_domain}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.342171" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.342171" level="INFO">Random Email: example_Sf3o@example.com</msg>
+<arg>Random Email: ${global_email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.342171" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-28T14:52:56.342171" level="INFO">Random Password: 3p(VPi`dR1</msg>
+<arg>Random Password: ${global_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.342171" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${global_email}</value>
+<value>${global_password}</value>
+<status status="PASS" start="2024-04-28T14:52:56.342171" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T14:52:56.342171" level="INFO">${global_email} = example_Sf3o@example.com</msg>
+<msg time="2024-04-28T14:52:56.342171" level="INFO">${global_password} = 3p(VPi`dR1</msg>
+<var>${global_email}</var>
+<var>${global_password}</var>
+<status status="PASS" start="2024-04-28T14:52:56.340213" elapsed="0.001958"/>
+</kw>
+<kw name="Input Registration Email Address" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.343146" level="INFO">Typing text 'example_Sf3o@example.com' into text field 'id=reg_email'.</msg>
+<arg>${REG_EMAIL_INPUT_ID}</arg>
+<arg>${reg_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.343146" elapsed="0.080368"/>
+</kw>
+<arg>${global_email}</arg>
+<status status="PASS" start="2024-04-28T14:52:56.343146" elapsed="0.080368"/>
+</kw>
+<kw name="Input Registration Password" owner="RegistrationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.424489" level="INFO">Typing text '3p(VPi`dR1' into text field 'id=reg_password'.</msg>
+<arg>${REG_PASSWORD_INPUT_ID}</arg>
+<arg>${reg_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.423514" elapsed="0.055557"/>
+</kw>
+<arg>${global_password}</arg>
+<status status="PASS" start="2024-04-28T14:52:56.423514" elapsed="0.055557"/>
+</kw>
+<kw name="Click On Register Button" owner="RegistrationKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.479071" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.479071" elapsed="0.003463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.482534" elapsed="0.017679"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T14:52:56.500213" level="INFO">Clicking element 'css=button[name='register'][value='Zarejestruj się']'.</msg>
+<arg>${REG_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T14:52:56.500213" elapsed="1.390067"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:56.479071" elapsed="1.411209"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="RegistrationKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-28T14:52:57.891259" elapsed="0.007362"/>
+</kw>
+<status status="PASS" start="2024-04-28T14:52:57.890280" elapsed="0.008341"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-28T14:52:57.899601" elapsed="2.070932"/>
+</kw>
+<tag>registration</tag>
+<status status="PASS" start="2024-04-28T14:52:52.493295" elapsed="7.477238"/>
+</test>
+<doc>Test Case: User Registration Functionality
+Title: Verify if a new user can successfully complete the registration process.</doc>
+<status status="PASS" start="2024-04-28T14:52:36.823369" elapsed="23.149127"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">registration</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCase001">TestCase001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

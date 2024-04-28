@@ -9,9 +9,9 @@ Locate Sorting Box
     Click Element                        ${ORDERBY_FORM_NAME}
 
 Select Sort Option
-    [Arguments]                          ${select_option}
+    [Arguments]    ${select_option}
     ${sort_locator} =    Collections.Get From Dictionary    ${SORT_LOCATORS}    ${select_option}
     Run Keyword If    '${sort_locator}' != 'None'
     ...    Click Element    ${sort_locator}
-    ...  ELSE
-    ...    Log    No locator found for option: ${select_option}
+    ...    ELSE
+    ...    Log    No locator found for option:  ${select_option}

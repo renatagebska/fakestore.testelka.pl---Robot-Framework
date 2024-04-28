@@ -12,8 +12,6 @@ Order Checkout Process
     Open Browser To FakeStore Page
     Go To Shop Page
     Click On Windsurfing Category
-    Locate Sorting Box
-    Select Sort Option      date
     Select Product By Order     third_product
     Locate and Click Quantity Input Field
     Clear and Enter Quantity    2
@@ -28,3 +26,4 @@ Order Checkout Process
     Locate and Apply Coupon Code    0
     Click Process To Checkout Button
     Fill In Payments Details    1   1   1   1   1   1   1
+    Fill In Card Details

@@ -7,12 +7,10 @@ Resource    ../Variables/LoginVariables.robot
 Input Login Email Address
     [Arguments]                          ${login_email_index}
     Input Text                           ${USERNAME_INPUT_ID}    ${email_list}[${login_email_index}]
-    Log    Entered Login Email: ${email_list}[${login_email_index}]
 
 Input Login Password
     [Arguments]                          ${login_password_index}
     Input Text                           ${PASSWORD_INPUT_ID}    ${password_list}[${login_password_index}]
-    Log    Entered Login Password: ${password_list}[${login_password_index}]
 
 Check Remember Me Box
     Click Element                        ${REMEMBER_ME_CHECKBOX_ID}
