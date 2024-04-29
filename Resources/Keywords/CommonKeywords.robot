@@ -50,3 +50,9 @@ Scroll Page Down If Element Not Visible
     ${element_visible} =    Run Keyword And Return Status    Element Should Be Visible    ${locator} 
     Run Keyword If    not ${element_visible}
     ...    Execute JavaScript    window.scrollBy(0, 400)
+
+Error Message Should Be Displayed
+    [Arguments]                           ${expected_message}
+    Wait Until Element Is Visible         ${error_element}
+    ${actual_message}   Get Text          ${error_element}
+    Should Be Equal As Strings  ${actual_message}   ${expected_message}

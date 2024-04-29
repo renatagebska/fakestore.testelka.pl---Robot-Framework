@@ -5,11 +5,15 @@ Resource        ../Resources/Keywords/CommonKeywords.robot
 Resource        ../Resources/Keywords/CartKeywords.robot
 Resource        ../Resources/Keywords/SortKeywords.robot
 Resource        ../Resources/Keywords/CheckoutKeywords.robot
+Suite Setup       Open Browser To FakeStore Page
+Suite Teardown    Close Browser
 
 *** Test Cases ***
-Order Checkout Process
+Order Checkout Process Test 1
+    [Documentation]  This test case verifies the order checkout process
+    ...              by adding windsurfing and sailing products to the cart,
+    ...              applying a coupon code, and filling in payment and card details.
     [Tags]  checkout
-    Open Browser To FakeStore Page
     Go To Shop Page
     Click On Windsurfing Category
     Select Product By Order     third_product

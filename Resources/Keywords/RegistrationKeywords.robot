@@ -23,13 +23,11 @@ Click On Register Button
 Welcome Page Should Be Open
     Wait Until Page Contains             Witaj
 
-Generate Random Email and Password
+Generate Random Email
     ${random_string}=  Generate Random String  ${random_string_length}
-    ${global_password}=  Generate Random Password
     ${global_email}=   Set Variable  ${email_prefix}_${random_string}@${email_domain}
     Log  Random Email: ${global_email}
-    Log  Random Password: ${global_password}
-    RETURN  ${global_email}  ${global_password}
+    RETURN  ${global_email}
 
 Generate Random Password
     ${upper_case}     Set Variable    ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -37,5 +35,6 @@ Generate Random Password
     ${digits}         Set Variable    0123456789
     ${special_chars}  Set Variable    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
     ${all_chars}      Set Variable    ${upper_case}${lower_case}${digits}${special_chars}
-    ${random_password}=    Evaluate    ''.join(random.sample($all_chars, ${password_length}))
-    RETURN  ${random_password}
+    ${global_password}=    Evaluate    ''.join(random.sample($all_chars, ${password_length}))
+    Log  Random Password: ${global_password}
+    RETURN  ${global_password}

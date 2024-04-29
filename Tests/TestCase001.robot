@@ -1,39 +1,41 @@
 *** Settings ***
-Documentation    Test Case: User Registration Functionality
-...              Title: Verify if a new user can successfully complete the registration process.
-Resource         ../Resources/Keywords/RegistrationKeywords.robot
-Resource         ../Resources/Keywords/CommonKeywords.robot
+Documentation     Test Case: User Registration Functionality
+...               Title: Verify if a new user can successfully complete the registration process.
+Resource          ../Resources/Keywords/RegistrationKeywords.robot
+Resource          ../Resources/Keywords/CommonKeywords.robot
 
 *** Test Cases ***
 User Registration Functionality Test 1
-    [Tags]  registration
+    [Documentation]  This test case verifies successful user registration with randomly generated email and password.
+    [Tags]  registration, successfull
     Open Browser To FakeStore Page
     Go to My Account Page
-    ${global_email}  ${global_password}=    Generate Random Email and Password
+    ${global_email}=      Generate Random Email
     Input Registration Email Address    ${global_email}
+    ${global_password}=   Generate Random Password
     Input Registration Password         ${global_password}
     Click On Register Button
     Welcome Page Should Be Open
-    [Teardown]    Close Browser
+    [Teardown]  Close Browser
 
 User Registration Functionality Test 2
-    [Tags]  registration
+    [Documentation]  This test case verifies error message when attempting to register without providing an email address.
+    [Tags]  registration, failed
     Open Browser To FakeStore Page
     Go to My Account Page
-    ${global_email}  ${global_password}=    Generate Random Email and Password
-    Input Registration Email Address    ${global_email}
+    ${global_password}=    Generate Random Password
     Input Registration Password         ${global_password}
     Click On Register Button
-    Welcome Page Should Be Open
-    [Teardown]    Close Browser
+    Error Message Should Be Displayed   Błąd: Podaj poprawny adres e-mail.
+    [Teardown]  Close Browser
 
 User Registration Functionality Test 3
-    [Tags]  registration
+    [Documentation]  This test case verifies error message when attempting to register without providing a password.
+    [Tags]  registration, failed
     Open Browser To FakeStore Page
     Go to My Account Page
-    ${global_email}  ${global_password}=    Generate Random Email and Password
+    ${global_email} =    Generate Random Email
     Input Registration Email Address    ${global_email}
-    Input Registration Password         ${global_password}
     Click On Register Button
-    Welcome Page Should Be Open
-    [Teardown]    Close Browser
+    Error Message Should Be Displayed     Błąd: Proszę wpisać hasło.
+    [Teardown]  Close Browser

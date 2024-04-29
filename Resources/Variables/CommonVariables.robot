@@ -16,3 +16,5 @@ ${ORDER_URL}                  https://fakestore.testelka.pl/zamowienie/
 ${CART_URL}                   https://fakestore.testelka.pl/koszyk/
 ${WISHLIST_URL}               https://fakestore.testelka.pl/wishlist/
 
+${error_element}              css=ul.woocommerce-error
+
