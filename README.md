@@ -149,7 +149,7 @@
   - Click sorting element.
   - Ensure "Menu Order" is selected.
   - Compare results order with expected.
-*  Sort by popularity:
+* Sort by popularity:
   - Click sorting element.
   - Choose "Sort by popularity".
   - Verify results are sorted by popularity.
