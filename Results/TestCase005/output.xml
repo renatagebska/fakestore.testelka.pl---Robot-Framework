@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-05-02T16:32:34.419166" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase005" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests/TestCase005.robot">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:34.508365" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:34.508161" elapsed="2.139109"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:32:36.647627" elapsed="0.120077"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:36.773320" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:36.768026" elapsed="0.005389"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:34.507592" elapsed="2.265929"/>
+</kw>
+<test id="s1-t1" name="Test Select All Sort Options Test 1" line="11">
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:36.775207" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:36.774832" elapsed="0.956830"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:37.738337" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:37.731874" elapsed="0.006567"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:37.757124" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:37.738704" elapsed="0.018557"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:37.757628" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:37.757474" elapsed="0.000190"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:36.774563" elapsed="0.983160"/>
+</kw>
+<kw name="Click On Climbing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:37.758440" elapsed="0.014340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:37.773177" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[2]/a'.</msg>
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:37.772966" elapsed="0.823265"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:38.600191" level="INFO">Page title is 'Wspinaczka – FakeStore'.</msg>
+<arg>Wspinaczka – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.596443" elapsed="0.003822"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:38.625029" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/wspinaczka/'.</msg>
+<arg>${CLIMBING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.600407" elapsed="0.024766"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:38.625639" level="INFO">Clicked on Climbing Category</msg>
+<arg>Clicked on Climbing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.625464" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:37.758198" elapsed="0.867550"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.626593" elapsed="0.014625"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:38.641617" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.641404" elapsed="0.071079"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:38.626321" elapsed="0.086287"/>
+</kw>
+<kw name="Select Sort Options" owner="SortKeywords">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-02T16:32:38.713999" level="INFO">${sort_options} = ['popularity', 'rating', 'date', 'price_asc', 'price_desc', 'menu_order']</msg>
+<var>${sort_options}</var>
+<arg>@{SORT_LOCATORS.keys()}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.713416" elapsed="0.000611"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:38.715288" level="INFO">"Selecting sort option: popularity"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.714977" elapsed="0.000363"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:38.716511" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[2]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.715794" elapsed="0.000744"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:38.717298" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[2]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.716899" elapsed="1.309488"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:38.716678" elapsed="1.309818"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:38.715503" elapsed="1.311061"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:40.027124" level="INFO">${expected_url} = /?orderby=popularity</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.026711" elapsed="0.000460"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:40.031226" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=popularity</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.027679" elapsed="0.003575"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.031391" elapsed="0.000279"/>
+</kw>
+<var name="${select_option}">popularity</var>
+<status status="PASS" start="2024-05-02T16:32:38.714805" elapsed="1.316908"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:40.032008" level="INFO">"Selecting sort option: rating"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.031901" elapsed="0.000162"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:40.032531" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[3]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.032404" elapsed="0.000145"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:40.032936" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[3]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.032807" elapsed="1.355015"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:40.032638" elapsed="1.355289"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:40.032190" elapsed="1.355805"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:41.388354" level="INFO">${expected_url} = /?orderby=rating</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.388137" elapsed="0.000239"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:41.396317" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=rating</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.388485" elapsed="0.007884"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.396591" elapsed="0.000270"/>
+</kw>
+<var name="${select_option}">rating</var>
+<status status="PASS" start="2024-05-02T16:32:40.031817" elapsed="1.365104"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:41.398087" level="INFO">"Selecting sort option: date"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.397912" elapsed="0.000213"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:41.398633" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[4]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.398496" elapsed="0.000157"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:41.399136" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[4]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.398983" elapsed="1.398970"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:41.398782" elapsed="1.399300"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:41.398270" elapsed="1.399977"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:42.798634" level="INFO">${expected_url} = ?orderby=date</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.798416" elapsed="0.000240"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:42.810752" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=date</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.798784" elapsed="0.012010"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.810979" elapsed="0.000236"/>
+</kw>
+<var name="${select_option}">date</var>
+<status status="PASS" start="2024-05-02T16:32:41.397053" elapsed="1.414209"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:42.811568" level="INFO">"Selecting sort option: price_asc"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.811462" elapsed="0.000135"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:42.812100" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[5]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.811940" elapsed="0.000179"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:42.812537" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[5]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.812397" elapsed="1.230500"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:42.812216" elapsed="1.230798"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:42.811717" elapsed="1.231368"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:44.043458" level="INFO">${expected_url} = /?orderby=price</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.043240" elapsed="0.000239"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:44.049942" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=price</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.043589" elapsed="0.006391"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.050195" elapsed="0.000177"/>
+</kw>
+<var name="${select_option}">price_asc</var>
+<status status="PASS" start="2024-05-02T16:32:42.811369" elapsed="1.239043"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:44.050704" level="INFO">"Selecting sort option: price_desc"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.050599" elapsed="0.000133"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:44.051298" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[6]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.051157" elapsed="0.000160"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:44.051731" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[6]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.051589" elapsed="1.247952"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:44.051408" elapsed="1.248238"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:44.050851" elapsed="1.248864"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:45.300152" level="INFO">${expected_url} = /?orderby=price-desc</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.299906" elapsed="0.000269"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:45.304556" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=price-desc</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.300286" elapsed="0.004299"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.304707" elapsed="0.000234"/>
+</kw>
+<var name="${select_option}">price_desc</var>
+<status status="PASS" start="2024-05-02T16:32:44.050515" elapsed="1.254471"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:45.305541" level="INFO">"Selecting sort option: menu_order"</msg>
+<arg>"Selecting sort option: ${select_option}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.305171" elapsed="0.000412"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:45.306094" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[1]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.305958" elapsed="0.000155"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:45.306521" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[1]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.306387" elapsed="1.294409"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:45.306209" elapsed="1.294710"/>
+</kw>
+<arg>${select_option}</arg>
+<status status="PASS" start="2024-05-02T16:32:45.305732" elapsed="1.295268"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:46.601421" level="INFO">${expected_url} = /</msg>
+<var>${expected_url}</var>
+<arg>${SORT_URLS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.601179" elapsed="0.000360"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:46.615290" level="INFO">${current_url} = https://fakestore.testelka.pl/product-category/wspinaczka/?orderby=menu_order</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.601709" elapsed="0.013653"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.615551" elapsed="0.000185"/>
+</kw>
+<var name="${select_option}">menu_order</var>
+<status status="PASS" start="2024-05-02T16:32:45.305090" elapsed="1.310685"/>
+</iter>
+<var>${select_option}</var>
+<value>@{sort_options}</value>
+<status status="PASS" start="2024-05-02T16:32:38.714105" elapsed="7.901706"/>
+</for>
+<status status="PASS" start="2024-05-02T16:32:38.713140" elapsed="7.902739"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:46.770655" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/sort_test1.png"&gt;&lt;img src="Screenshots/sort_test1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/sort_test1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.616339" elapsed="0.154415"/>
+</kw>
+<doc>Test veryfying the correctness of sorting options functionality
+as well as redirection to appropriate URL addresses.</doc>
+<tag>sort</tag>
+<status status="PASS" start="2024-05-02T16:32:36.773635" elapsed="9.997642"/>
+</test>
+<test id="s1-t2" name="Test Select Sort Option By Price Ascending Test 2" line="21">
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:46.774959" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.774786" elapsed="0.711955"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:47.500946" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:47.487115" elapsed="0.013932"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:47.504573" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:47.501233" elapsed="0.003421"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:47.505043" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:47.504916" elapsed="0.000163"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:46.774558" elapsed="0.730578"/>
+</kw>
+<kw name="Click On Climbing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:47.505890" elapsed="0.016498"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:47.522734" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[2]/a'.</msg>
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:47.522547" elapsed="0.818587"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:48.343412" level="INFO">Page title is 'Wspinaczka – FakeStore'.</msg>
+<arg>Wspinaczka – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.341347" elapsed="0.002137"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:48.345005" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/wspinaczka/'.</msg>
+<arg>${CLIMBING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.343621" elapsed="0.001436"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:48.345348" level="INFO">Clicked on Climbing Category</msg>
+<arg>Clicked on Climbing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.345254" elapsed="0.000126"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:47.505669" elapsed="0.839766"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.346052" elapsed="0.006061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:48.352398" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.352241" elapsed="0.046178"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:48.345844" elapsed="0.052695"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:48.400337" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[5]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.400161" elapsed="0.000198"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:48.400985" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[5]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.400687" elapsed="0.668796"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:48.400469" elapsed="0.669119"/>
+</kw>
+<arg>price_asc</arg>
+<status status="PASS" start="2024-05-02T16:32:48.399865" elapsed="0.669790"/>
+</kw>
+<kw name="Validate Prices Are Sorted" owner="SortKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${price_element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.070466" elapsed="0.005390"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.078813" level="INFO">${prices} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="be8544d0-406e-4987-b449-7fec7a3ad343")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<var>${prices}</var>
+<arg>${price_element}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.076002" elapsed="0.002845"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-02T16:32:49.079105" level="INFO">${prices_text} = []</msg>
+<var>${prices_text}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.078980" elapsed="0.000145"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.090673" level="INFO">${price_text} = 0,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.079783" elapsed="0.010930"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.090899" elapsed="0.000186"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="be8544d0-406e-4987-b449-7fec7a3ad343")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:49.079681" elapsed="0.011444"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.098048" level="INFO">${price_text} = 2 999,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.091313" elapsed="0.006768"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.098211" elapsed="0.000138"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="1f71a688-e44d-4801-81f5-ec2f2bcc4f0e")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:49.091228" elapsed="0.007156"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.107816" level="INFO">${price_text} = 2 799,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.098548" elapsed="0.009312"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.108041" elapsed="0.000176"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="87026d5c-cde0-4c1e-a457-ee38d15ea4b5")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:49.098471" elapsed="0.009785"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.115157" level="INFO">${price_text} = 2 999,99 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.108437" elapsed="0.006756"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.115384" elapsed="0.000155"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="e40f2082-019e-4f4b-a7aa-63b63ba33292")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:49.108353" elapsed="0.007224"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.123362" level="INFO">${price_text} = 8 200,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.115750" elapsed="0.007647"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.123536" elapsed="0.000143"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="e4f88aa7-57de-423a-bace-bb609e6a88a0")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:49.115670" elapsed="0.008048"/>
+</iter>
+<var>${price}</var>
+<value>@{prices}</value>
+<status status="PASS" start="2024-05-02T16:32:49.079189" elapsed="0.044591"/>
+</for>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Evaluate" owner="BuiltIn">
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.124093" elapsed="0.000220"/>
+</kw>
+<msg time="2024-05-02T16:32:49.124382" level="INFO">${sorted_prices} = ['0,00 zł', '2 799,00 zł', '2 999,00 zł', '2 999,99 zł', '8 200,00 zł']</msg>
+<var>${sorted_prices}</var>
+<arg>'${sort_option}' == 'price_asc'</arg>
+<arg>Evaluate</arg>
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))))</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.123896" elapsed="0.000504"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:49.124583" level="INFO">Prices sorted in ascending order: ['0,00 zł', '2 799,00 zł', '2 999,00 zł', '2 999,99 zł', '8 200,00 zł']</msg>
+<arg>Prices sorted in ascending order: ${sorted_prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.124486" elapsed="0.000125"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-05-02T16:32:49.124805" level="INFO">${sorted_prices_desc} = None</msg>
+<var>${sorted_prices_desc}</var>
+<arg>'${sort_option}' == 'price_desc'</arg>
+<arg>Evaluate</arg>
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))), reverse=True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.124695" elapsed="0.000126"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:49.124985" level="INFO">Prices sorted in descending order: None</msg>
+<arg>Prices sorted in descending order: ${sorted_prices_desc}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.124901" elapsed="0.000110"/>
+</kw>
+<arg>price_asc</arg>
+<status status="PASS" start="2024-05-02T16:32:49.070176" elapsed="0.054880"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.293594" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/sort_test2.png"&gt;&lt;img src="Screenshots/sort_test2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/sort_test2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.125455" elapsed="0.168237"/>
+</kw>
+<doc>Test verifying the functionality of sorting options by price ascending.
+This test case validates that the prices are sorted in ascending order.</doc>
+<status status="PASS" start="2024-05-02T16:32:46.774065" elapsed="2.520015"/>
+</test>
+<test id="s1-t3" name="Test Slect Sort Option By Price Descending Test 3" line="31">
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:49.295533" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.295360" elapsed="0.710897"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.009139" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.006469" elapsed="0.002747"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.012027" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.009378" elapsed="0.002707"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:50.012299" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.012206" elapsed="0.000123"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:49.295133" elapsed="0.717248"/>
+</kw>
+<kw name="Click On Climbing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.013009" elapsed="0.011124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.024561" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[2]/a'.</msg>
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.024341" elapsed="0.783963"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.811621" level="INFO">Page title is 'Wspinaczka – FakeStore'.</msg>
+<arg>Wspinaczka – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.808537" elapsed="0.003150"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.816515" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/wspinaczka/'.</msg>
+<arg>${CLIMBING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.811825" elapsed="0.004785"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:50.816959" level="INFO">Clicked on Climbing Category</msg>
+<arg>Clicked on Climbing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.816813" elapsed="0.000185"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:50.012769" elapsed="0.804290"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.817957" elapsed="0.019119"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.837512" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.837282" elapsed="0.039935"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:32:50.817728" elapsed="0.059610"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:32:50.878603" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[6]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.878428" elapsed="0.000200"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:50.879376" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[6]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.879219" elapsed="0.701761"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:50.878981" elapsed="0.702102"/>
+</kw>
+<arg>price_desc</arg>
+<status status="PASS" start="2024-05-02T16:32:50.878127" elapsed="0.703022"/>
+</kw>
+<kw name="Validate Prices Are Sorted" owner="SortKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${price_element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.582057" elapsed="0.017722"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.609116" level="INFO">${prices} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="82cd2b19-f09f-4b22-88c9-0252d97b1ada")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<var>${prices}</var>
+<arg>${price_element}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.599999" elapsed="0.009160"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-02T16:32:51.609462" level="INFO">${prices_text} = []</msg>
+<var>${prices_text}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.609328" elapsed="0.000153"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.617941" level="INFO">${price_text} = 0,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.609885" elapsed="0.008088"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.618110" elapsed="0.000147"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="82cd2b19-f09f-4b22-88c9-0252d97b1ada")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:51.609655" elapsed="0.008640"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.626035" level="INFO">${price_text} = 8 200,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.618468" elapsed="0.007603"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.626217" elapsed="0.000277"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="1fc8ddda-21f3-41ee-b220-8d830bb192bf")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:51.618388" elapsed="0.008155"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.641951" level="INFO">${price_text} = 2 999,99 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.626729" elapsed="0.015316"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.642320" elapsed="0.000292"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="c4379860-1073-45c5-bd6a-40e2bd3d1f51")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:51.626642" elapsed="0.016039"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.651907" level="INFO">${price_text} = 2 999,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.642984" elapsed="0.008957"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.652086" elapsed="0.000151"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="096dba21-6b77-4667-9717-4af2def87b35")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:51.642834" elapsed="0.009442"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.659729" level="INFO">${price_text} = 2 799,00 zł</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.652456" elapsed="0.007306"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_text}</arg>
+<arg>${price_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.659896" elapsed="0.000140"/>
+</kw>
+<var name="${price}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b1f9f30e7d6e04126c21ee8359de773f", element="295feb15-6bff-4f0a-813c-8613abf17aea")&gt;</var>
+<status status="PASS" start="2024-05-02T16:32:51.652374" elapsed="0.007699"/>
+</iter>
+<var>${price}</var>
+<value>@{prices}</value>
+<status status="PASS" start="2024-05-02T16:32:51.609533" elapsed="0.050575"/>
+</for>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-05-02T16:32:51.660377" level="INFO">${sorted_prices} = None</msg>
+<var>${sorted_prices}</var>
+<arg>'${sort_option}' == 'price_asc'</arg>
+<arg>Evaluate</arg>
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))))</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.660223" elapsed="0.000173"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:51.660590" level="INFO">Prices sorted in ascending order: None</msg>
+<arg>Prices sorted in ascending order: ${sorted_prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.660490" elapsed="0.000128"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Evaluate" owner="BuiltIn">
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))), reverse=True)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.660860" elapsed="0.000202"/>
+</kw>
+<msg time="2024-05-02T16:32:51.661177" level="INFO">${sorted_prices_desc} = ['8 200,00 zł', '2 999,99 zł', '2 999,00 zł', '2 799,00 zł', '0,00 zł']</msg>
+<var>${sorted_prices_desc}</var>
+<arg>'${sort_option}' == 'price_desc'</arg>
+<arg>Evaluate</arg>
+<arg>sorted(${prices_text}, key=lambda x: int(float(x.replace(' zł', '').replace(' ', '').replace(',', '.'))), reverse=True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.660710" elapsed="0.000483"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:32:51.661491" level="INFO">Prices sorted in descending order: ['8 200,00 zł', '2 999,99 zł', '2 999,00 zł', '2 799,00 zł', '0,00 zł']</msg>
+<arg>Prices sorted in descending order: ${sorted_prices_desc}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.661365" elapsed="0.000156"/>
+</kw>
+<arg>price_desc</arg>
+<status status="PASS" start="2024-05-02T16:32:51.581710" elapsed="0.079860"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:32:51.798876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/sort_test3.png"&gt;&lt;img src="Screenshots/sort_test3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/sort_test3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.661763" elapsed="0.137217"/>
+</kw>
+<doc>Test verifying the functionality of sorting options by price descending.
+This test case validates that the prices are sorted in descending order.</doc>
+<status status="PASS" start="2024-05-02T16:32:49.294663" elapsed="2.504719"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:32:51.800204" elapsed="0.060092"/>
+</kw>
+<doc>Test Case: Product Sorting Functionality
+Title: Verify if a user can successfully sort Climbing products.</doc>
+<status status="PASS" start="2024-05-02T16:32:34.420103" elapsed="17.440276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">sort</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCase005">TestCase005</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

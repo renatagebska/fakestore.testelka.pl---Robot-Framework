@@ -4,13 +4,12 @@ Documentation    Test Case: Adding To Cart Functionality
 Resource        ../Resources/Keywords/CommonKeywords.robot
 Resource        ../Resources/Keywords/CartKeywords.robot
 Resource        ../Resources/Keywords/SortKeywords.robot
-Suite Setup       Open Browser To FakeStore Page
-Suite Teardown    Close Browser
 
 *** Test Cases ***
 Adding To Cart Functionality Test 1
     [Documentation]  This test case verifies the functionality of adding climbing and yoga products to the cart.
     [Tags]  cart
+    Open Browser To FakeStore Page
     Go To Shop Page
     Click On Climbing Category
     Locate Sorting Box
@@ -28,10 +27,13 @@ Adding To Cart Functionality Test 1
     Clear and Enter Quantity    2
     Add Yoga Products To Cart
     Go To Cart Page
+    Capture Page Screenshot     Screenshots/cart_test1.png
+    [Teardown]      Close Browser
 
 Adding To Cart Functionality Test 2
     [Documentation]  This test case verifies the functionality of adding windsurfing and sailing products to the cart.
     [Tags]  cart
+    Open Browser To FakeStore Page
     Go To Shop Page
     Click On Windsurfing Category
     Locate Sorting Box
@@ -49,10 +51,13 @@ Adding To Cart Functionality Test 2
     Clear and Enter Quantity    4
     Add Sailing Products To Cart
     Go To Cart Page
+    Capture Page Screenshot     Screenshots/cart_test2.png
+    [Teardown]      Close Browser
 
 Adding To Cart Functionality Test 3
     [Documentation]  This test case verifies the functionality of adding yoga and climbing products to the cart.
     [Tags]  cart
+    Open Browser To FakeStore Page
     Go To Shop Page
     Click On Yoga Category
     Locate Sorting Box
@@ -70,3 +75,5 @@ Adding To Cart Functionality Test 3
     Clear and Enter Quantity    5
     Add Climbing Products To Cart
     Go To Cart Page
+    Capture Page Screenshot     Screenshots/cart_test3.png
+    [Teardown]      Close Browser

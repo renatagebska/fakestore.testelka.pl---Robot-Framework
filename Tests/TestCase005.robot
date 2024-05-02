@@ -16,6 +16,7 @@ Test Select All Sort Options Test 1
     Click On Climbing Category
     Locate Sorting Box
     Select Sort Options
+    Capture Page Screenshot     Screenshots/sort_test1.png
 
 Test Select Sort Option By Price Ascending Test 2
     [Documentation]    Test verifying the functionality of sorting options by price ascending.
@@ -25,6 +26,7 @@ Test Select Sort Option By Price Ascending Test 2
     Locate Sorting Box
     Select Sort Option  price_asc
     Validate Prices Are Sorted  price_asc
+    Capture Page Screenshot     Screenshots/sort_test2.png
 
 Test Slect Sort Option By Price Descending Test 3
     [Documentation]    Test verifying the functionality of sorting options by price descending.
@@ -34,3 +36,4 @@ Test Slect Sort Option By Price Descending Test 3
     Locate Sorting Box
     Select Sort Option  price_desc
     Validate Prices Are Sorted  price_desc
+    Capture Page Screenshot     Screenshots/sort_test3.png

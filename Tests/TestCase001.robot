@@ -16,6 +16,7 @@ User Registration Functionality Test 1
     Input Registration Password         ${global_password}
     Click On Register Button
     Welcome Page Should Be Open
+    Capture Page Screenshot     Screenshots/registration_test1.png
     [Teardown]  Close Browser
 
 User Registration Functionality Test 2
@@ -27,6 +28,7 @@ User Registration Functionality Test 2
     Input Registration Password         ${global_password}
     Click On Register Button
     Error Message Should Be Displayed   Błąd: Podaj poprawny adres e-mail.
+    Capture Page Screenshot     Screenshots/registration_test2.png
     [Teardown]  Close Browser
 
 User Registration Functionality Test 3
@@ -38,4 +40,5 @@ User Registration Functionality Test 3
     Input Registration Email Address    ${global_email}
     Click On Register Button
     Error Message Should Be Displayed     Błąd: Proszę wpisać hasło.
+    Capture Page Screenshot     Screenshots/registration_test3.png
     [Teardown]  Close Browser

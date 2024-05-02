@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-05-02T16:17:51.709700" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase002" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests/TestCase002.robot">
+<test id="s1-t1" name="Login Functionality Test 1" line="8">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:51.788857" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:17:51.788668" elapsed="2.069720"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:17:53.859030" elapsed="0.126262"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:53.993235" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:17:53.985498" elapsed="0.007899"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:51.788147" elapsed="2.205432"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:53.995085" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:53.994647" elapsed="1.005440"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.004623" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.000295" elapsed="0.004415"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.008571" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.004864" elapsed="0.003767"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:17:55.008880" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.008769" elapsed="0.000143"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:53.994131" elapsed="1.014835"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.009653" level="INFO">Typing text 'example224@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${email_list}[${login_email_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.009436" elapsed="0.118348"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-05-02T16:17:55.009206" elapsed="0.118713"/>
+</kw>
+<kw name="Input Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.128789" level="INFO">Typing text 'example224password123!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${password_list}[${login_password_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.128578" elapsed="0.141165"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-05-02T16:17:55.128213" elapsed="0.141650"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.270659" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.270484" elapsed="0.055793"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:55.270220" elapsed="0.056176"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.327310" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.327041" elapsed="0.020719"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.347970" elapsed="0.015024"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:55.363394" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:55.363183" elapsed="1.321248"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:55.326786" elapsed="1.357764"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-02T16:17:56.685064" elapsed="0.026375"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:56.684827" elapsed="0.026731"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:56.853010" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test1.png"&gt;&lt;img src="Screenshots/login_test1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:17:56.711876" elapsed="0.141227"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:17:56.853456" elapsed="0.067322"/>
+</kw>
+<doc>This test case verifies successful login with valid email and password.</doc>
+<tag>login, successfull</tag>
+<status status="PASS" start="2024-05-02T16:17:51.787445" elapsed="5.133532"/>
+</test>
+<test id="s1-t2" name="Login Functionality Test 2" line="21">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:56.922224" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:17:56.921988" elapsed="2.196204"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:17:59.118537" elapsed="0.115072"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:59.237471" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:17:59.233807" elapsed="0.003734"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:56.921741" elapsed="2.315890"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:17:59.238628" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:17:59.238435" elapsed="1.122240"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.365498" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.360891" elapsed="0.004728"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.369699" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.365865" elapsed="0.003926"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:18:00.370122" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.369973" elapsed="0.000194"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:17:59.238161" elapsed="1.132078"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.371471" level="INFO">Typing text 'example225@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${email_list}[${login_email_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.371188" elapsed="0.108317"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-05-02T16:18:00.370876" elapsed="0.108756"/>
+</kw>
+<kw name="Input Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.481274" level="INFO">Typing text 'example225password123!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${password_list}[${login_password_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.480973" elapsed="0.116655"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-05-02T16:18:00.480659" elapsed="0.117095"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.598709" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.598528" elapsed="0.042865"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:00.598263" elapsed="0.043246"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.643426" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.642885" elapsed="0.006337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.649379" elapsed="0.033072"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:00.683040" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:00.682653" elapsed="1.554214"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:00.642615" elapsed="1.594373"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-02T16:18:02.237945" elapsed="0.018589"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:02.237563" elapsed="0.019099"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:02.375488" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test2.png"&gt;&lt;img src="Screenshots/login_test2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:18:02.257083" elapsed="0.118498"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:18:02.376421" elapsed="0.058802"/>
+</kw>
+<doc>This test case verifies successful login with different valid email and password.</doc>
+<tag>login, successfull</tag>
+<status status="PASS" start="2024-05-02T16:17:56.921289" elapsed="5.514457"/>
+</test>
+<test id="s1-t3" name="Login Functionality Test 3" line="34">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:02.437161" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:02.436967" elapsed="2.345774"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:18:04.783090" elapsed="0.128823"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:04.923581" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:04.912119" elapsed="0.011561"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:02.436711" elapsed="2.487084"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:04.925041" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:04.924821" elapsed="1.060045"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:05.988890" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:05.985059" elapsed="0.003914"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:05.992919" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:05.989122" elapsed="0.003861"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:18:05.993233" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:18:05.993125" elapsed="0.000139"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:04.924289" elapsed="1.069024"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:05.993942" level="INFO">Typing text 'example223@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${email_list}[${login_email_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:05.993765" elapsed="0.120226"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2024-05-02T16:18:05.993549" elapsed="0.120686"/>
+</kw>
+<kw name="Input Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:06.114975" level="INFO">Typing text 'example223password123!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${password_list}[${login_password_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:06.114774" elapsed="0.139136"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2024-05-02T16:18:06.114513" elapsed="0.139519"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:06.254783" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:06.254618" elapsed="0.089618"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:06.254334" elapsed="0.090023"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:06.345271" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:18:06.344997" elapsed="0.016162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:06.361466" elapsed="0.027764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:06.389678" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:06.389466" elapsed="1.356512"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:06.344741" elapsed="1.401357"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Witaj</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-02T16:18:07.746681" elapsed="0.011037"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:07.746387" elapsed="0.011445"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:07.858240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test3.png"&gt;&lt;img src="Screenshots/login_test3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:18:07.758103" elapsed="0.100234"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:18:07.858855" elapsed="0.058966"/>
+</kw>
+<doc>This test case verifies successful login with another set of valid credentials.</doc>
+<tag>login, successfull</tag>
+<status status="PASS" start="2024-05-02T16:18:02.436235" elapsed="5.481800"/>
+</test>
+<test id="s1-t4" name="Login Functionality Test 4" line="47">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:07.919340" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:07.919164" elapsed="2.279204"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:18:10.198722" elapsed="0.109849"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:10.311672" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:10.308770" elapsed="0.002965"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:07.918926" elapsed="2.392894"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:10.312844" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:10.312553" elapsed="1.037941"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.356413" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.350772" elapsed="0.005727"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.360831" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.356662" elapsed="0.004241"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:18:11.361171" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.361055" elapsed="0.000152"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:10.312303" elapsed="1.048958"/>
+</kw>
+<kw name="Input Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.362228" level="INFO">Typing text 'example225password123!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${password_list}[${login_password_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.362021" elapsed="0.116244"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-05-02T16:18:11.361668" elapsed="0.116713"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.479627" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.479450" elapsed="0.041657"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:11.479197" elapsed="0.042051"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.522289" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.521980" elapsed="0.003711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.525838" elapsed="0.043216"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:11.569568" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:11.569344" elapsed="0.806534"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:11.521723" elapsed="0.854276"/>
+</kw>
+<kw name="Error Message Should Be Displayed" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.376768" elapsed="0.017048"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:12.421844" level="INFO">${actual_message} = Błąd: Nazwa użytkownika jest wymagana.</msg>
+<var>${actual_message}</var>
+<arg>${error_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.394023" elapsed="0.027866"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_message}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.422059" elapsed="0.000206"/>
+</kw>
+<arg>Błąd: Nazwa użytkownika jest wymagana.</arg>
+<status status="PASS" start="2024-05-02T16:18:12.376487" elapsed="0.045840"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:12.547999" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test4.png"&gt;&lt;img src="Screenshots/login_test4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test4.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.422729" elapsed="0.125370"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.548790" elapsed="0.083713"/>
+</kw>
+<doc>This test case verifies error message when attempting to login without providing an email address.</doc>
+<tag>login, failed</tag>
+<status status="PASS" start="2024-05-02T16:18:07.918339" elapsed="4.714525"/>
+</test>
+<test id="s1-t5" name="Login Functionality Test 5" line="59">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:12.634723" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:12.634494" elapsed="2.667223"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:18:15.302097" elapsed="0.110007"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:15.439067" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:15.412304" elapsed="0.026881"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:12.634143" elapsed="2.805166"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:15.440320" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:15.440101" elapsed="1.020814"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.466030" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.461142" elapsed="0.004978"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.473255" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.466852" elapsed="0.006480"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:18:16.473621" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.473495" elapsed="0.000162"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:15.439753" elapsed="1.033956"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.474406" level="INFO">Typing text 'example223@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${email_list}[${login_email_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.474219" elapsed="0.103713"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2024-05-02T16:18:16.473984" elapsed="0.104083"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.578991" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.578815" elapsed="0.038915"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:16.578560" elapsed="0.039284"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.618853" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.618584" elapsed="0.007149"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.626008" elapsed="0.034998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:16.661433" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:16.661212" elapsed="0.728465"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:16.618333" elapsed="0.771460"/>
+</kw>
+<kw name="Error Message Should Be Displayed" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.390371" elapsed="0.054958"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:17.459902" level="INFO">${actual_message} = Błąd: pole hasła jest puste.</msg>
+<var>${actual_message}</var>
+<arg>${error_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.445528" elapsed="0.014410"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_message}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.460088" elapsed="0.000193"/>
+</kw>
+<arg>Błąd: pole hasła jest puste.</arg>
+<status status="PASS" start="2024-05-02T16:18:17.390105" elapsed="0.070235"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:17.549459" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test5.png"&gt;&lt;img src="Screenshots/login_test5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test5.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.460644" elapsed="0.088936"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.549953" elapsed="0.069068"/>
+</kw>
+<doc>This test case verifies error message when attempting to login without providing a password.</doc>
+<tag>login, failed</tag>
+<status status="PASS" start="2024-05-02T16:18:12.633500" elapsed="4.985701"/>
+</test>
+<test id="s1-t6" name="Login Functionality Test 6" line="71">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:17.620555" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:17.620377" elapsed="2.142108"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:18:19.762827" elapsed="0.133778"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:19.901037" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:19.896810" elapsed="0.004312"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:17.620144" elapsed="2.281083"/>
+</kw>
+<kw name="Go To My Account Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:19.902043" level="INFO">Clicking element 'id=menu-item-201'.</msg>
+<arg>${MY_ACCOUNT_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:19.901842" elapsed="0.967793"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:20.876652" level="INFO">Page title is 'Moje konto – FakeStore'.</msg>
+<arg>Moje konto – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:18:20.869829" elapsed="0.006919"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:20.881960" level="INFO">Current location is 'https://fakestore.testelka.pl/moje-konto/'.</msg>
+<arg>${MY_ACCOUNT_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:18:20.876945" elapsed="0.005089"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:18:20.882311" level="INFO">Redirected to My Account Page</msg>
+<arg>Redirected to My Account Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:18:20.882190" elapsed="0.000160"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:19.901565" elapsed="0.980838"/>
+</kw>
+<kw name="Input Login Email Address" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:20.883182" level="INFO">Typing text 'unregistered@example.com' into text field 'id=username'.</msg>
+<arg>${USERNAME_INPUT_ID}</arg>
+<arg>${email_list}[${login_email_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:20.882990" elapsed="0.165156"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2024-05-02T16:18:20.882746" elapsed="0.165562"/>
+</kw>
+<kw name="Input Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:21.049212" level="INFO">Typing text 'unregistered_password' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT_ID}</arg>
+<arg>${password_list}[${login_password_index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:21.048894" elapsed="0.110399"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2024-05-02T16:18:21.048627" elapsed="0.110787"/>
+</kw>
+<kw name="Check Remember Me Box" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:21.161328" level="INFO">Clicking element 'id=rememberme'.</msg>
+<arg>${REMEMBER_ME_CHECKBOX_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:21.161140" elapsed="0.064303"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:21.160306" elapsed="0.065253"/>
+</kw>
+<kw name="Click On Login Button" owner="LoginKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:21.226396" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:18:21.226124" elapsed="0.004956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:21.231222" elapsed="0.037153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:21.268795" level="INFO">Clicking element 'css=button[name='login'][value='Zaloguj się']'.</msg>
+<arg>${LOGIN_BUTTON_CSS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:21.268574" elapsed="0.858605"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:18:21.225866" elapsed="0.901437"/>
+</kw>
+<kw name="Error Message Should Be Displayed" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:18:22.128387" elapsed="0.014104"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:22.156155" level="INFO">${actual_message} = Nieznany adres e-mail. Proszę sprawdzić ponownie lub wypróbować swoją nazwę użytkownika.</msg>
+<var>${actual_message}</var>
+<arg>${error_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:18:22.142680" elapsed="0.013520"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_message}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-02T16:18:22.156497" elapsed="0.000285"/>
+</kw>
+<arg>Nieznany adres e-mail. Proszę sprawdzić ponownie lub wypróbować swoją nazwę użytkownika.</arg>
+<status status="PASS" start="2024-05-02T16:18:22.128086" elapsed="0.028764"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:18:22.275850" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/login_test6.png"&gt;&lt;img src="Screenshots/login_test6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/login_test6.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:18:22.157073" elapsed="0.118887"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:18:22.276584" elapsed="0.069624"/>
+</kw>
+<doc>This test case verifies error message when attempting to login with unregistered user's credentials.</doc>
+<tag>login, failed</tag>
+<status status="PASS" start="2024-05-02T16:18:17.619506" elapsed="4.727239"/>
+</test>
+<doc>Test Case: Login Functionality
+Title: Verify if a user can successfully log in using correct login credentials.</doc>
+<status status="PASS" start="2024-05-02T16:17:51.710302" elapsed="30.637077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">login, failed</stat>
+<stat pass="3" fail="0" skip="0">login, successfull</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="TestCase002">TestCase002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

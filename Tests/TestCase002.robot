@@ -15,6 +15,7 @@ Login Functionality Test 1
     Check Remember Me Box
     Click On Login Button
     Welcome Page Should Be Open
+    Capture Page Screenshot     Screenshots/login_test1.png
     [Teardown]   Close Browser
 
 Login Functionality Test 2
@@ -27,6 +28,7 @@ Login Functionality Test 2
     Check Remember Me Box
     Click On Login Button
     Welcome Page Should Be Open
+    Capture Page Screenshot     Screenshots/login_test2.png
     [Teardown]   Close Browser
 
 Login Functionality Test 3
@@ -39,6 +41,7 @@ Login Functionality Test 3
     Check Remember Me Box
     Click On Login Button
     Welcome Page Should Be Open
+    Capture Page Screenshot     Screenshots/login_test3.png
     [Teardown]   Close Browser
 
 Login Functionality Test 4
@@ -50,6 +53,7 @@ Login Functionality Test 4
     Check Remember Me Box
     Click On Login Button
     Error Message Should Be Displayed   Błąd: Nazwa użytkownika jest wymagana.
+    Capture Page Screenshot     Screenshots/login_test4.png
     [Teardown]   Close Browser
 
 Login Functionality Test 5
@@ -61,6 +65,7 @@ Login Functionality Test 5
     Check Remember Me Box
     Click On Login Button
     Error Message Should Be Displayed   Błąd: pole hasła jest puste.
+    Capture Page Screenshot     Screenshots/login_test5.png
     [Teardown]   Close Browser
 
 Login Functionality Test 6
@@ -73,4 +78,5 @@ Login Functionality Test 6
     Check Remember Me Box
     Click On Login Button
     Error Message Should Be Displayed   Nieznany adres e-mail. Proszę sprawdzić ponownie lub wypróbować swoją nazwę użytkownika.
+    Capture Page Screenshot     Screenshots/login_test6.png
     [Teardown]   Close Browser

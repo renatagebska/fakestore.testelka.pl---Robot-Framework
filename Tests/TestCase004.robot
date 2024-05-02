@@ -31,3 +31,4 @@ Order Checkout Process Test 1
     Click Process To Checkout Button
     Fill In Payments Details    1   1   1   1   1   1   1
     Fill In Card Details
+    Capture Page Screenshot     Screenshots/checkout_test1.png
