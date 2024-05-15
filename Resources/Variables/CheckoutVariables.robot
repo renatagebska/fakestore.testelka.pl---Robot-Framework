@@ -11,12 +11,9 @@ ${BILLING_CITY_INPUT_ID}              id=billing_city
 ${BILLING_PHONE_INPUT_ID}             id=billing_phone
 ${BILLING_EMAIL_INPUT_ID}             id=billing_email
 
-${BILLING_CARD_NUMBER_INPUT_ID}       css=#root > form > span:nth-child(4) > div > div > div.CardNumberField-input-wrapper > span > input
-${BILLING_CARD_EXPIRY_INPUT_ID}       css=#root > form > span:nth-child(4) > div > span > input
-${BILLING_CARD_CVC_INPUT_ID}          css=#root > form > span:nth-child(4) > div > span > input
-
-${BILLING_TERMS_INPUT_ID}             id=terms
-${BILLING_PLACE_ORDER_BUTTON_ID}      id=place_order
+${BILLING_TERMS_INPUT_CSS}            css=#terms
+${BILLING_TERMS_LINK_CSS}             css=#payment > div > div > p > label > span > a
+${BILLING_PLACE_ORDER_BUTTON_CSS}     css=#place_order
 
 @{FIRST_NAME}                         Julita    Kasper   Beata   Wiga
 @{LAST_NAME}                          Gorska    Czarnecki   Symanska    Ostrowska
@@ -25,8 +22,3 @@ ${BILLING_PLACE_ORDER_BUTTON_ID}      id=place_order
 @{CITY}                               Krakow       Gdansk      Olsztyn     Bydgoszcz
 @{PHONE}                              60 103 88 09      79 624 50 78    60 194 39 37    53 561 56 89
 @{BILLING_EMAIL}                      example@example.com   example1@example.com    example2@example.com    example3@example.com
-
-${BILLING_CARD_NUMBER}                4242424242424242
-${BILLING_CARD_EXPIRY}                10/26
-${BILLING_CARD_CVC}                   111
-
