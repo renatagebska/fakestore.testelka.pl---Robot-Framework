@@ -65,10 +65,38 @@ Fill In Payments Details
     Clear Element Text                          ${BILLING_EMAIL_INPUT_ID}
     Input Text                                  ${BILLING_EMAIL_INPUT_ID}         ${BILLING_EMAIL}[${email_index}]
 
+Fill In Card Details
+    Wait Until Element Is Visible               ${FIELDSET_ID}
+    Wait Until Frame Is Visible                 ${IFRAME_CARD_NUMBER}
+    Select Frame                                ${IFRAME_CARD_NUMBER}
+    Wait Until Element Is Visible               ${CARD_NUMBER_INPUT_NAME}         timeout=10s
+    Click Element                               ${CARD_NUMBER_INPUT_NAME}
+    Clear Element Text                          ${CARD_NUMBER_INPUT_NAME}
+    Input Text                                  ${CARD_NUMBER_INPUT_NAME}         ${card_number}
+    Unselect Frame
+
+    Wait Until Element Is Visible               ${FIELDSET_ID}
+    Wait Until Frame Is Visible                 ${IFRAME_CARD_EXPIRY}
+    Select Frame                                ${IFRAME_CARD_EXPIRY}
+    Wait Until Element Is Visible               ${CARD_EXPIRY_INPUT_NAME}         timeout=10s
+    Click Element                               ${CARD_EXPIRY_INPUT_NAME}
+    Clear Element Text                          ${CARD_EXPIRY_INPUT_NAME}
+    Input Text                                  ${CARD_EXPIRY_INPUT_NAME}         ${card_expiry_date}
+    Unselect Frame
+
+    Wait Until Element Is Visible               ${FIELDSET_ID}
+    Wait Until Frame Is Visible                 ${IFRAME_CVC}
+    Select Frame                                ${IFRAME_CVC}
+    Wait Until Element Is Visible               ${CVC_INPUT_NAME}                 timeout=10s
+    Click Element                               ${CVC_INPUT_NAME}
+    Clear Element Text                          ${CVC_INPUT_NAME}
+    Input Text                                  ${CVC_INPUT_NAME}                  ${card_cvc}
+    Unselect Frame
+
 Read And Accept Terms
     Execute JavaScript                          window.scrollBy(0, 500);
-    Wait Until Element Is Visible               ${BILLING_TERMS_LINK_CSS}
-    Click Element                               ${BILLING_TERMS_LINK_CSS}
+    Wait Until Element Is Visible               ${BILLING_TERMS_INPUT_CSS}
+    Click Element                               ${BILLING_TERMS_INPUT_CSS}
     FOR    ${i}    IN RANGE    3
         Wait Until Page Contains Element    ${BILLING_TERMS_INPUT_CSS}    timeout=10s
         ${checkbox}=    Run Keyword And Return Status    Checkbox Should Be Selected    ${BILLING_TERMS_INPUT_CSS}
@@ -93,16 +121,4 @@ Click The Buy And Pay Button
     Fail    Unable to find the billing button after 3 attempts
     Check Redirected Page
 
-Click Element If Visible
-    [Arguments]    ${locator}
-    ${element_present} =    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=5s
-    Run Keyword If    '${element_present}' == 'True'    Click Element    ${locator}
-    ...    ELSE
-    ...    Log    Element not visible or found after waiting
 
-Refresh Page And Retry
-    Execute JavaScript    window.location.reload(true)
-
-Check Redirected Page
-    ${current_url}=     Get Location
-    Should Match Regexp     ${current_url}    ${ORDER_RECEIVED_URL}

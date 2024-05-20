@@ -56,3 +56,21 @@ Error Message Should Be Displayed
     Wait Until Element Is Visible         ${error_element}
     ${actual_message}   Get Text          ${error_element}
     Should Be Equal As Strings  ${actual_message}   ${expected_message}
+
+Click Element If Visible
+    [Arguments]    ${locator}
+    ${element_present} =    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=5s
+    Run Keyword If    '${element_present}' == 'True'    Click Element    ${locator}
+    ...    ELSE
+    ...    Log    Element not visible or found after waiting
+
+Refresh Page And Retry
+    Execute JavaScript    window.location.reload(true)
+
+Check Redirected Page
+    ${current_url}=     Get Location
+    Should Match Regexp     ${current_url}    ${ORDER_RECEIVED_URL}
+
+Wait Until Frame Is Visible
+    [Arguments]     ${iframe_locator}
+    Wait Until Element Is Visible    ${iframe_locator}    timeout=10s

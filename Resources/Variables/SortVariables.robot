@@ -1,6 +1,6 @@
 *** Variables ***
 
-${ORDERBY_FORM_NAME}          name=orderby
+${ORDERBY_FORM_NAME}          name:orderby
 
 &{SORT_LOCATORS}              popularity=//*[@id="main"]/div[1]/form/select/option[2]
 ...                           rating=//*[@id="main"]/div[1]/form/select/option[3]
@@ -16,4 +16,4 @@ ${ORDERBY_FORM_NAME}          name=orderby
 ...                           price_desc=/?orderby=price-desc
 ...                           menu_order=/
 
-${price_element}              css=span.woocommerce-Price-amount.amount
+${price_element}              css:span.woocommerce-Price-amount.amount

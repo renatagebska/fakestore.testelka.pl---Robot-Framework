@@ -1,9 +1,9 @@
 *** Variables ***
 
-${WINDSURFING_CATEGORY_XPATH}           xpath=//*[@id="main"]/ul/li[1]/a
-${CLIMBING_CATEGORY_XPATH}              xpath=//*[@id="main"]/ul/li[2]/a
-${YOGA_CATEGORY_XPATH}                  xpath=//*[@id="main"]/ul/li[3]/a
-${SAILING_CATEGORY_XPATH}               xpath=//*[@id="main"]/ul/li[4]/a
+${WINDSURFING_CATEGORY_XPATH}           xpath://*[@id="main"]/ul/li[1]/a
+${CLIMBING_CATEGORY_XPATH}              xpath://*[@id="main"]/ul/li[2]/a
+${YOGA_CATEGORY_XPATH}                  xpath://*[@id="main"]/ul/li[3]/a
+${SAILING_CATEGORY_XPATH}               xpath://*[@id="main"]/ul/li[4]/a
 
 ${WINDSERFING_URL}                      https://fakestore.testelka.pl/product-category/windsurfing/
 ${CLIMBING_URL}                         https://fakestore.testelka.pl/product-category/wspinaczka/
