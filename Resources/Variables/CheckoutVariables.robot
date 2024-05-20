@@ -15,9 +15,8 @@ ${CARD_NUMBER_INPUT_NAME}             name:cardnumber
 ${CARD_EXPIRY_INPUT_NAME}             name:exp-date
 ${CVC_INPUT_NAME}                     name:cvc
 
-${BILLING_TERMS_INPUT_CSS}            css:#terms
-${BILLING_TERMS_LINK_CSS}             css:#payment > div > div > p > label > span > a
-${BILLING_PLACE_ORDER_BUTTON_CSS}     css:#place_order
+${BILLING_TERMS_CHECKBOX_XPATH}       xpath://*[@id="terms"]
+${BILLING_PLACE_ORDER_BUTTON_XPATH}   xpath://*[@id="place_order"]
 
 ${FIELDSET_ID}                        id:wc-stripe-cc-form
 ${IFRAME_CARD_NUMBER}                 css:#stripe-card-element > div > iframe

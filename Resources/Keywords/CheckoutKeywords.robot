@@ -65,7 +65,7 @@ Fill In Payments Details
     Clear Element Text                          ${BILLING_EMAIL_INPUT_ID}
     Input Text                                  ${BILLING_EMAIL_INPUT_ID}         ${BILLING_EMAIL}[${email_index}]
 
-Fill In Card Details
+Fill In Card Number Details
     Wait Until Element Is Visible               ${FIELDSET_ID}
     Wait Until Frame Is Visible                 ${IFRAME_CARD_NUMBER}
     Select Frame                                ${IFRAME_CARD_NUMBER}
@@ -75,6 +75,7 @@ Fill In Card Details
     Input Text                                  ${CARD_NUMBER_INPUT_NAME}         ${card_number}
     Unselect Frame
 
+Fill In Card Expiry Details
     Wait Until Element Is Visible               ${FIELDSET_ID}
     Wait Until Frame Is Visible                 ${IFRAME_CARD_EXPIRY}
     Select Frame                                ${IFRAME_CARD_EXPIRY}
@@ -84,6 +85,7 @@ Fill In Card Details
     Input Text                                  ${CARD_EXPIRY_INPUT_NAME}         ${card_expiry_date}
     Unselect Frame
 
+Fill In Card CVC Details
     Wait Until Element Is Visible               ${FIELDSET_ID}
     Wait Until Frame Is Visible                 ${IFRAME_CVC}
     Select Frame                                ${IFRAME_CVC}
@@ -94,31 +96,14 @@ Fill In Card Details
     Unselect Frame
 
 Read And Accept Terms
-    Execute JavaScript                          window.scrollBy(0, 500);
-    Wait Until Element Is Visible               ${BILLING_TERMS_INPUT_CSS}
-    Click Element                               ${BILLING_TERMS_INPUT_CSS}
-    FOR    ${i}    IN RANGE    3
-        Wait Until Page Contains Element    ${BILLING_TERMS_INPUT_CSS}    timeout=10s
-        ${checkbox}=    Run Keyword And Return Status    Checkbox Should Be Selected    ${BILLING_TERMS_INPUT_CSS}
-        Log    Checkbox status: ${checkbox}
-        Run Keyword If    '${checkbox}' == 'FAIL'
-        ...    Click Element If Visible    ${BILLING_TERMS_INPUT_CSS}
-        ...    ELSE
-        ...    Log    Checkbox already selected
-    END
-    Fail    Unable to handle checkbox after 3 attempts
+    Wait Until Element Is Visible               ${BILLING_TERMS_CHECKBOX_XPATH}
+    Select Checkbox                             ${BILLING_TERMS_CHECKBOX_XPATH}
 
 Click The Buy And Pay Button
-    Execute JavaScript                          window.scrollBy(0, 500);
-    FOR    ${i}    IN RANGE    3
-        ${billing_button} =    Run Keyword And Return Status    Wait Until Element Is Visible    ${BILLING_PLACE_ORDER_BUTTON_CSS}    timeout=20s
-        Log    ${billing_button}
-        Run Keyword If    '${billing_button}' == 'True'
-        ...    Click Element If Visible   ${BILLING_PLACE_ORDER_BUTTON_CSS}
-        ...    ELSE
-        ...    Refresh Page And Retry
-    END
-    Fail    Unable to find the billing button after 3 attempts
-    Check Redirected Page
+    Wait Until Element Is Visible               ${BILLING_PLACE_ORDER_BUTTON_XPATH}
+    Click Element                               ${BILLING_PLACE_ORDER_BUTTON_XPATH}
+
+Order Page Should Be Open
+    Wait Until Page Contains                    Zamówienie otrzymane               timeout=20s
 
 

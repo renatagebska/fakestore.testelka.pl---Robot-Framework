@@ -15,7 +15,6 @@ ${MY_ACCOUNT_URL}             https://fakestore.testelka.pl/moje-konto/
 ${ORDER_URL}                  https://fakestore.testelka.pl/zamowienie/
 ${CART_URL}                   https://fakestore.testelka.pl/koszyk/
 ${WISHLIST_URL}               https://fakestore.testelka.pl/wishlist/
-${ORDER_RECEIVED_URL}         https://fakestore.testelka.pl/zamowienie/zamowienie-otrzymane/
 
 ${error_element}              css:ul.woocommerce-error
 

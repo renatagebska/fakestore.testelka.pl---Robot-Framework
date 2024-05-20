@@ -67,10 +67,6 @@ Click Element If Visible
 Refresh Page And Retry
     Execute JavaScript    window.location.reload(true)
 
-Check Redirected Page
-    ${current_url}=     Get Location
-    Should Match Regexp     ${current_url}    ${ORDER_RECEIVED_URL}
-
 Wait Until Frame Is Visible
     [Arguments]     ${iframe_locator}
     Wait Until Element Is Visible    ${iframe_locator}    timeout=10s
