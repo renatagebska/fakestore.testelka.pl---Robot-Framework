@@ -206,96 +206,230 @@ After clicking the "Login" button, an error message requesting correct login dat
 * After step 19: The cart contents are displayed.
 * After step 20: The browser is closed.
 
----
+### Test 3
+### Title: Verify if the user can successfully add products from the Yoga and Climbing categories to the cart.
 
+#### Steps:
+* Open Chrome browser.
+* Maximize the window.
+* Navigate to: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Yoga" link.
+* Locate the sorting box and sort products by average rating.
+* Click on the fifth displayed product.
+* Locate and click the quantity input field.
+* Clear the quantity input field.
+* Enter the quantity as 2.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Climbing" link.
+* Locate the sorting box and sort products by price: low to high.
+* Click on the third displayed product.
+* Clear the quantity input field.
+* Enter the quantity as 5.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Close the browser.
+  
+#### Expected Results:
+* Step 3: The https://fakestore.testelka.pl/ page should load correctly.
+* Step 4: The page with available products should be displayed.
+* Step 5: The page with Yoga products should be displayed.
+* Step 6: Products should be sorted by average rating.
+* Steps 7-11: The fifth displayed product in quantity of 2 should be added to the cart.
+* Steps 12-19: The third displayed product from the "Climbing" category sorted by price: low to high, in quantity of 5 should be added to the cart.
+* Step 19: The cart contents should be displayed.
+* Step 20: The browser should close.
+
+---
 
 ### Test Case: Order Checkout Process
 ### ID: 004
-### Title: Verify if a user can successfully complete the order checkout process.
-
+### Test 1
+### Title: Verify if the user can successfully complete an order process by adding products from Windsurfing and Sailing categories, using a coupon, and filling in payment details.
 
 #### Steps:
-* Open the Chrome browser.
+* Open Chrome browser.
 * Maximize the window.
-* Go to the website: https://fakestore.testelka.pl/
-* Locate and click on the "Shop" link.
+* Navigate to: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
 * Locate and click the "Windsurfing" link.
-* Locate the sorting window and sort the products by date.
 * Click on the third displayed product.
-* Locate and click on the quantity input field.
+* Locate and click the quantity input field.
 * Clear the quantity input field.
-* Enter quantity 2.
-* Click on the "Add to Cart" button.
-* Locate and click on the "Shop" link.
-* Locate and click the "Sailing" link.
+* Enter the quantity as 2.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Sailing" link.
 * Click on the first displayed product.
-* Locate and click on the quantity input field.
 * Clear the quantity input field.
-* Enter quantity 3.
-* Click on the "Add to Cart" button.
-* Locate and click on the "Cart" link.
-* Locate and clear the "Coupon Code" field. Enter the code 10percent.
-* Locate and click on the "Apply Coupon" button.
-* Locate and click on the "Proceed to Checkout" button.
-* Fill in the payment details: first name, last name, street, postal code, city, phone, email address, any additional information, card number, expiration date, CVC code.
-* Accept the terms and conditions and locate and click on the "Buy and Pay" button.
+* Enter the quantity as 3.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Locate and clear the "Coupon Code" field. Enter the first code from the list.
+* Locate and click the "Apply Coupon" button.
+* Locate and click the "Proceed to Checkout" button.
+* Fill in payment details: first name, last name, street address, postal code, city, phone, email address, any additional information, card number, expiration date, CVC code.
+* Accept the terms and locate and click the "Place Order" button.
 * Close the browser.
 
 #### Expected Results:
-* After steps 19-20: After entering the coupon code and clicking the "Apply Coupon" button, the expected result is the application of the coupon and any changes to the cart or order price.
-* After steps 21-22: Proceed to the payment section, where the user should enter correct payment details and credit card information.
-* After step 23: The user should receive an order confirmation and be redirected to the order confirmation page.
-* After step 24: The browser is closed.
+* Steps 1-16: The selected products from Windsurfing and Sailing categories should be added to the cart.
+* Steps 18-19: Upon entering the coupon code and clicking the "Apply Coupon" button, the coupon should be applied and any changes in the cart or order price should be reflected.
+* Steps 20-21: Proceed to the payment section where the user should enter valid payment details including card information.
+* Step 22: The user should receive an order confirmation and be redirected to the order confirmation page.
+* Step 23: The browser should close.
+
+### Test 2
+### Title: Verify if the user can successfully complete an order process by adding products from Windsurfing and Sailing categories, using a coupon, and filling in payment details with the card number omitted.
+
+#### Steps:
+* Open Chrome browser.
+* Maximize the window.
+* Navigate to: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Windsurfing" link.
+* Click on the first displayed product.
+* Locate and click the quantity input field.
+* Clear the quantity input field.
+* Enter the quantity as 2.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Sailing" link.
+* Click on the first displayed product.
+* Clear the quantity input field.
+* Enter the quantity as 1.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Locate and clear the "Coupon Code" field. Enter the second code from the list.
+* Locate and click the "Apply Coupon" button.
+* Locate and click the "Proceed to Checkout" button.
+* Fill in payment details: first name, last name, street address, postal code, city, phone, email address, any additional information, expiration date, CVC code. Leave the card number field empty.
+* Accept the terms and locate and click the "Place Order" button.
+* Close the browser.
+
+#### Expected Results:
+* Steps 1-16: The selected products from Windsurfing and Sailing categories should be added to the cart.
+* Steps 18-19: Upon entering the coupon code and clicking the "Apply Coupon" button, the coupon should be applied and any changes in the cart or order price should be reflected.
+* Steps 20-21: Proceed to the payment section where the user should enter valid payment details, leaving the card number field empty.
+* Step 22: An error message should appear prompting the user to enter the card number.
+* Step 23: The browser should close.
+
+### Test 3
+### Title: Verify if the user can successfully complete an order process by adding products from Windsurfing and Sailing categories, using a coupon, and filling in payment details with the expiration date omitted.
+
+#### Steps:
+* Open Chrome browser.
+* Maximize the window.
+* Navigate to: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Windsurfing" link.
+* Click on the third displayed product.
+* Locate and click the quantity input field.
+* Clear the quantity input field.
+* Enter the quantity as 2.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Sailing" link.
+* Click on the first displayed product.
+* Clear the quantity input field.
+* Enter the quantity as 3.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Locate and clear the "Coupon Code" field. Enter the third code from the list.
+* Locate and click the "Apply Coupon" button.
+* Locate and click the "Proceed to Checkout" button.
+* Fill in payment details: first name, last name, street address, postal code, city, phone, email address, any additional information, card number, CVC code. Leave the expiration date field empty.
+* Accept the terms and locate and click the "Place Order" button.
+* Close the browser.
+
+#### Expected Results:
+* Steps 1-16: The selected products from Windsurfing and Sailing categories should be added to the cart.
+* Steps 18-19: Upon entering the coupon code and clicking the "Apply Coupon" button, the coupon should be applied and any changes in the cart or order price should be reflected.
+* Steps 20-21: Proceed to the payment section where the user should enter valid payment details, leaving the expiration date field empty.
+* Step 22: An error message should appear prompting the user to enter the expiration date.
+* Step 23: The browser should close.
+
+### Test 4
+### Title: Verify if the user can successfully complete an order process by adding products from Windsurfing and Sailing categories, using a coupon, and filling in payment details with the CVC code omitted.
+
+#### Steps:
+* Open Chrome browser.
+* Maximize the window.
+* Navigate to: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Windsurfing" link.
+* Click on the second displayed product.
+* Locate and click the quantity input field.
+* Clear the quantity input field.
+* Enter the quantity as 1.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Sailing" link.
+* Click on the first displayed product.
+* Clear the quantity input field.
+* Enter the quantity as 1.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Locate and clear the "Coupon Code" field. Enter the fourth code from the list.
+* Locate and click the "Apply Coupon" button.
+* Locate and click the "Proceed to Checkout" button.
+* Fill in payment details: first name, last name, street address, postal code, city, phone, email address, any additional information, card number, expiration date. Leave the CVC code field empty.
+* Accept the terms and locate and click the "Place Order" button.
+* Close the browser.
+
+#### Expected Results:
+* Steps 1-16: The selected products from Windsurfing and Sailing categories should be added to the cart.
+* Steps 18-19: Upon entering the coupon code and clicking the "Apply Coupon" button, the coupon should be applied and any changes in the cart or order price should be reflected.
+* Steps 20-21: Proceed to the payment section where the user should enter valid payment details, leaving the CVC code field empty.
+* Step 22: An error message should appear prompting the user to enter the CVC code.
+* Step 23: The browser should close.
+
 ---
-
-
 
 ### Test Case: Product Sorting Functionality
 ### ID: 005
+### Test 1
 ### Title: Verify if a user can successfully sort Climbing products.
 
 #### Steps:
 * Open the Chrome browser.
 * Maximize the window.
-* Go to the website: https://fakestore.testelka.pl/
-* Locate and click on the "Shop" link.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "Store" link.
 * Locate and click the "Climbing" link.
-* Check menu-order sorting:
-  - Click sorting element.
-  - Ensure "Menu Order" is selected.
-  - Compare results order with expected.
-* Sort by popularity:
-  - Click sorting element.
-  - Choose "Sort by popularity".
-  - Verify results are sorted by popularity.
-* Sort by rating:
-  - Click sorting element.
-  - Select "Sort by average rating".
-  - Confirm results are sorted by product rating.
-* Sort by newness:
-  - Click sorting element.
-  - Opt for "Sort by newness".
-  - Validate results are sorted by product addition date, newest first.
-* Sort by price (lowest to highest):
-  - Click sorting element.
-  - Pick "Sort by price: low to high".
-  - Ensure results are sorted by price, lowest first.
-* Sort by price (highest to lowest):
-  - Click sorting element.
-  - Choose "Sort by price: high to low".
-  - Confirm results are sorted by price, highest first.
+* Locate the sorting dropdown and sort the products sequentially by: default sorting, popularity, average rating, newest, price: low to high, price: high to low.
 * Close the browser.
 
 #### Expected Results:
-* Menu-order sorting:
-  - The products should be displayed according to the default menu order set by the website administrators. Ensure that the order matches the expected arrangement specified by the website's administrators.
-* Sort by popularity:
-  - After selecting "Sort by popularity," the products should be rearranged based on their popularity, with the most popular products displayed first.
-* Sort by rating:
-  - Upon selecting "Sort by average rating," the products should be reordered according to their average rating, with the highest-rated products listed first.
-* Sort by newness:
-  - When opting for "Sort by newness," the products should be sorted based on their addition date, with the newest products appearing at the beginning of the list.
-* Sort by price (lowest to highest):
-  - After selecting "Sort by price: low to high," the products should be sorted in ascending order of price, with the lowest-priced products listed first.
-* Sort by price (highest to lowest):
-  - Upon choosing "Sort by price: high to low," the products should be arranged in descending order of price, with the highest-priced products displayed first.
+For each sorting option, the system should display the products in the expected order, ensuring consistency and intuitiveness for users.
+
+### Test 2
+### Title: Verify that the user can successfully sort products in the Climbing category by ascending price.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "Store" link.
+* Locate and click the "Climbing" link.
+* Locate the sorting dropdown and sort the products by: price: low to high.
+* Close the browser.
+
+#### Expected Results:
+Upon selecting the ascending price sorting option, the product prices on the page should be ordered from lowest to highest.
+
+### Test 3
+### Title: Verify that the user can successfully sort products in the Climbing category by descending price.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "Store" link.
+* Locate and click the "Climbing" link.
+* Locate the sorting dropdown and sort the products by: price: high to low.
+* Close the browser.
+
+#### Expected Results:
+Upon selecting the descending price sorting option, the product prices on the page should be ordered from highest to lowest.
