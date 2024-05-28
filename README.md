@@ -6,8 +6,9 @@
 
 ### Test Case: User Registration Functionality
 ### ID: 001
-### Title: Verify if a new user can successfully complete the registration process using new, correct registration data.
 
+### Test 1
+### Title: Verify if a new user can successfully complete the registration process using new, correct registration data.
 
 #### Steps:
 * Open the Chrome browser.
@@ -26,11 +27,44 @@
 * After step 6: The password is entered into the appropriate field.
 * After step 7: The user is successfully registered and redirected to the "My Account" page.
 * After step 8: The browser is closed.
+
+### Test 2
+### Title: Verify that an error message appears when trying to register without providing an email address.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "My Account" link.
+* Locate the "Password" field and enter a password.
+* Locate and click the "Register" button.
+* Close the browser.
+
+#### Expected Results:
+After clicking the "Register" button, an error message requesting the email address should appear.
+
+### Test 3
+### Title: Verify that an error message appears when trying to register without providing a password.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "My Account" link.
+* Locate the "Email Address" field and enter a valid email address.
+* Locate and click the "Register" button.
+* Close the browser.
+
+#### Expected Results:
+After clicking the "Register" button, an error message requesting the password should appear.
+
 ---
 
 
 ### Test Case: Login Functionality
 ### ID: 002
+
+### Test 1, 2, 3
 ### Title: Verify if a user can successfully log in using correct login credentials.
 
 
@@ -51,46 +85,127 @@
 * After step 6: The correct password is entered into the appropriate field.
 * After step 7: The user is successfully logged in and redirected to the "My Account" page.
 * After step 8: The browser is closed.
----
 
-
-### Test Case: Adding to Cart Functionality
-### ID: 003
-### Title: Verify if a user can successfully add products to the cart.
-
+### Test 4
+### Title: Verify that an error message appears when trying to log in without providing an email address.
 
 #### Steps:
 * Open the Chrome browser.
 * Maximize the window.
-* Go to the website: https://fakestore.testelka.pl/
-* Locate and click on the "Shop" link.
-* Locate and click the "Climbing" link.
-* Locate the sorting window and sort the products by popularity.
-* Click on the first displayed product.
-* Locate and click on the quantity input field.
-* Clear the quantity input field.
-* Enter quantity 1.
-* Click on the "Add to Cart" button.
-* Locate and click on the "Shop" link.
-* Locate and click the "Yoga and Pilates" link.
-* Locate the sorting window and sort the products by price: from lowest.
-* Click on the second displayed product.
-* Locate and click on the quantity input field.
-* Clear the quantity input field.
-* Enter quantity 2.
-* Click on the "Add to Cart" button.
-* Locate and click on the "Cart" link.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "My Account" link.
+* Locate the "Password" field and enter the correct password.
+* Locate and click the "Login" button.
 * Close the browser.
 
 #### Expected Results:
-* After step 3: The page https://fakestore.testelka.pl/ is loaded correctly.
+After clicking the "Login" button, an error message requesting the email address should appear.
+
+### Test 5
+### Title: Verify that an error message appears when trying to log in without providing a password.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "My Account" link.
+* Locate the "Email Address" field and enter a valid email address.
+* Locate and click the "Login" button.
+* Close the browser.
+
+#### Expected Results:
+After clicking the "Login" button, an error message requesting the password should appear.
+
+### Test 6
+### Title: Verify that an error message appears when trying to log in with an unregistered user.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "My Account" link.
+* Locate the "Email Address" field and enter an invalid email address.
+* Locate the "Password" field and enter an incorrect password.
+* Locate and click the "Login" button.
+* Close the browser.
+
+#### Expected Results:
+After clicking the "Login" button, an error message requesting correct login data should appear.
+
+---
+
+### Test Case: Adding to Cart Functionality
+### ID: 003
+### Test 1
+### Title: Verify that a user can successfully add products from the climbing and yoga categories to the cart.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Climbing" link.
+* Locate the sorting field and sort products by popularity.
+* Click on the first displayed product.
+* Locate and click the product quantity field.
+* Clear the quantity field.
+* Enter the quantity 1.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Yoga and Pilates" link.
+* Locate the sorting field and sort products by price: lowest first.
+* Click on the second displayed product.
+* Clear the quantity field.
+* Enter the quantity 2.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Close the browser.
+
+#### Expected Results:
+* After step 3: The page https://fakestore.testelka.pl/ loads correctly.
 * After step 4: A page with available products is displayed.
-* After step 5: The climbing offers are displayed.
-* After step 6: The products are sorted by popularity.
-* After steps 7-11: The first displayed product is added to the cart.
-* After steps 12-19: The second displayed product from the "Yoga and Pilates" category sorted by price: from lowest in quantity 2 is added to the cart.
+* After step 5: Climbing products are displayed.
+* After step 6: Products are sorted by popularity.
+* After steps 7-11: The first displayed product with a quantity of 1 is added to the cart.
+* After steps 12-19: The second displayed product from the "Yoga and Pilates" category sorted by price (lowest first) with a quantity of 2 is added to the cart.
 * After step 19: The cart contents are displayed.
 * After step 20: The browser is closed.
+
+### Test 2
+### Title: Verify that a user can successfully add products from the windsurfing and sailing categories to the cart.
+
+#### Steps:
+* Open the Chrome browser.
+* Maximize the window.
+* Navigate to the website: https://fakestore.testelka.pl/
+* Locate and click the "Shop" link.
+* Locate and click the "Windsurfing" link.
+* Locate the sorting field and sort products by date.
+* Click on the third displayed product.
+* Locate and click the product quantity field.
+* Clear the quantity field.
+* Enter the quantity 3.
+* Click the "Add to Cart" button.
+* Locate and click the "Shop" link.
+* Locate the "Sailing" link.
+* Locate the sorting field and sort products by price: highest first.
+* Click on the first displayed product.
+* Clear the quantity field.
+* Enter the quantity 1.
+* Click the "Add to Cart" button.
+* Locate and click the "Cart" link.
+* Close the browser.
+
+#### Expected Results:
+* After step 3: The page https://fakestore.testelka.pl/ loads correctly.
+* After step 4: A page with available products is displayed.
+* After step 5: Windsurfing products are displayed.
+* After step 6: Products are sorted by date.
+* After steps 7-11: The third displayed product with a quantity of 3 is added to the cart.
+* After steps 12-19: The first displayed product from the "Sailing" category sorted by price (highest first) with a quantity of 1 is added to the cart.
+* After step 19: The cart contents are displayed.
+* After step 20: The browser is closed.
+
 ---
 
 
