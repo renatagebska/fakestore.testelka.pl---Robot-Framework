@@ -1,0 +1,2102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-05-02T16:39:58.344808" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase003" source="/home/tester/fakestore.testelka.pl---Robot-Framework/Tests/TestCase003.robot">
+<test id="s1-t1" name="Adding To Cart Functionality Test 1" line="9">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:39:58.438778" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:39:58.438588" elapsed="2.304541"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:40:00.743505" elapsed="0.127373"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:00.887645" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:40:00.871103" elapsed="0.016656"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:39:58.438039" elapsed="2.449856"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:00.889074" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:00.888632" elapsed="0.850856"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:01.744717" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:40:01.739710" elapsed="0.005208"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:01.748994" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:40:01.745185" elapsed="0.003904"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:01.749497" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:01.749309" elapsed="0.000227"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:00.888262" elapsed="0.861340"/>
+</kw>
+<kw name="Click On Climbing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:40:01.750318" elapsed="0.024230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:01.774967" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[2]/a'.</msg>
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:01.774747" elapsed="0.825203"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:02.605786" level="INFO">Page title is 'Wspinaczka – FakeStore'.</msg>
+<arg>Wspinaczka – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.600177" elapsed="0.005693"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:02.615747" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/wspinaczka/'.</msg>
+<arg>${CLIMBING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.606026" elapsed="0.009819"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:02.616174" level="INFO">Clicked on Climbing Category</msg>
+<arg>Clicked on Climbing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.616030" elapsed="0.000187"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:01.750081" elapsed="0.866198"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.616896" elapsed="0.015955"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:02.633298" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.633061" elapsed="0.070409"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:02.616678" elapsed="0.086924"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:02.704815" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[2]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.704613" elapsed="0.000225"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:02.705321" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[2]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.705171" elapsed="1.342468"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:40:02.704959" elapsed="1.342790"/>
+</kw>
+<arg>popularity</arg>
+<status status="PASS" start="2024-05-02T16:40:02.704294" elapsed="1.343529"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:04.048883" level="INFO">${product_locator} = //*[@id="main"]/ul/li[1]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:04.048696" elapsed="0.000210"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:04.049383" level="INFO">Clicking element '//*[@id="main"]/ul/li[1]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:04.049233" elapsed="8.952358"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:40:04.049028" elapsed="8.952950"/>
+</kw>
+<arg>first_product</arg>
+<status status="PASS" start="2024-05-02T16:40:04.048381" elapsed="8.953689"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:13.003114" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.002935" elapsed="0.061567"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:13.002562" elapsed="0.062067"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:13.066075" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.065443" elapsed="0.054438"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:13.120338" level="INFO">Typing text '1' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.120092" elapsed="0.043779"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-05-02T16:40:13.065146" elapsed="0.098853"/>
+</kw>
+<kw name="Add Climbing Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:40:13.165035" level="INFO">${climbing_locations} = ['Gran_Koscielcow', 'Island_Peak', 'Via_Ferraty']</msg>
+<var>${climbing_locations}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.164861" elapsed="0.000196"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:13.165515" level="INFO">${climbing_locator} = //*[@id="product-4114"]/div[2]/form/button</msg>
+<var>${climbing_locator}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<arg>${climbing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.165377" elapsed="0.000156"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:23.389521" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:40:23.389681" level="FAIL">Element '//*[@id="product-4114"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:40:13.165744" elapsed="10.224284">Element '//*[@id="product-4114"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:40:23.390167" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:40:13.165626" elapsed="10.224557"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${climbing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:23.390492" elapsed="0.000022"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:23.390600" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:40:23.390288" elapsed="0.000352"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:23.390878" level="INFO">Element 'Gran_Koscielcow' not visible after 10 seconds.</msg>
+<arg>Element '${climbing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:23.390742" elapsed="0.000169"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:23.390667" elapsed="0.000275"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:40:23.390260" elapsed="0.000703"/>
+</if>
+<var name="${climbing_location}">Gran_Koscielcow</var>
+<status status="PASS" start="2024-05-02T16:40:13.165294" elapsed="10.225686"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:23.391331" level="INFO">${climbing_locator} = //*[@id="product-42"]/div[2]/form/button</msg>
+<var>${climbing_locator}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<arg>${climbing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:23.391187" elapsed="0.000161"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:33.679964" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:40:33.680100" level="FAIL">Element '//*[@id="product-42"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:40:23.391550" elapsed="10.288648">Element '//*[@id="product-42"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:40:33.680327" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:40:23.391438" elapsed="10.288905"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${climbing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:33.680641" elapsed="0.000030"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:33.680762" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:40:33.680432" elapsed="0.000368"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:33.681040" level="INFO">Element 'Island_Peak' not visible after 10 seconds.</msg>
+<arg>Element '${climbing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:33.680897" elapsed="0.000176"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:33.680823" elapsed="0.000279"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:40:33.680411" elapsed="0.000710"/>
+</if>
+<var name="${climbing_location}">Island_Peak</var>
+<status status="PASS" start="2024-05-02T16:40:23.391109" elapsed="10.290026"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:33.681608" level="INFO">${climbing_locator} = //*[@id="product-40"]/div[2]/form/button</msg>
+<var>${climbing_locator}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<arg>${climbing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:33.681460" elapsed="0.000164"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:40:33.681824" elapsed="0.013791"/>
+</kw>
+<msg time="2024-05-02T16:40:33.695736" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:40:33.681713" elapsed="0.014042"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:33.696158" level="INFO">Clicking element '//*[@id="product-40"]/div[2]/form/button'.</msg>
+<arg>${climbing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:33.695995" elapsed="1.385651"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:40:35.082004" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:40:35.081867" elapsed="0.000197"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:33.695830" elapsed="1.386273"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${climbing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:35.082235" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:40:35.082134" elapsed="0.000143"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:40:33.695815" elapsed="1.386479"/>
+</if>
+<var name="${climbing_location}">Via_Ferraty</var>
+<status status="PASS" start="2024-05-02T16:40:33.681383" elapsed="1.400929"/>
+</iter>
+<var>${climbing_location}</var>
+<value>@{climbing_locations}</value>
+<status status="PASS" start="2024-05-02T16:40:13.165127" elapsed="21.917213"/>
+</for>
+<status status="PASS" start="2024-05-02T16:40:13.164592" elapsed="21.917806"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:35.084020" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:35.083620" elapsed="1.234005"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:36.325250" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:40:36.317879" elapsed="0.007460"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:36.329809" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:40:36.325505" elapsed="0.004378"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:36.330145" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:36.330034" elapsed="0.000143"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:35.083274" elapsed="1.246957"/>
+</kw>
+<kw name="Click On Yoga Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YOGA_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:40:36.330890" elapsed="0.013528"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:36.344929" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[3]/a'.</msg>
+<arg>${YOGA_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:36.344605" elapsed="0.824778"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:37.174371" level="INFO">Page title is 'Yoga i pilates – FakeStore'.</msg>
+<arg>Yoga i pilates – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.169696" elapsed="0.004775"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:37.184367" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/yoga-i-pilates/'.</msg>
+<arg>${YOGA_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.174643" elapsed="0.009867"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:37.184832" level="INFO">Clicked on Yoga Category</msg>
+<arg>Clicked on Yoga Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.184696" elapsed="0.000169"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:36.330662" elapsed="0.854260"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.185664" elapsed="0.022997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:37.209090" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.208868" elapsed="0.045295"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:37.185425" elapsed="0.069428"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:37.256672" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[5]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.256318" elapsed="0.000381"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:37.257399" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[5]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.257236" elapsed="1.441274"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:40:37.256844" elapsed="1.441790"/>
+</kw>
+<arg>price_asc</arg>
+<status status="PASS" start="2024-05-02T16:40:37.255908" elapsed="1.442804"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:38.700481" level="INFO">${product_locator} = //*[@id="main"]/ul/li[2]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:38.700265" elapsed="0.000238"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:38.700969" level="INFO">Clicking element '//*[@id="main"]/ul/li[2]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:38.700817" elapsed="3.353006"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:40:38.700620" elapsed="3.353453"/>
+</kw>
+<arg>second_product</arg>
+<status status="PASS" start="2024-05-02T16:40:38.699490" elapsed="3.354682"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:42.055283" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.055103" elapsed="0.048695"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:42.054679" elapsed="0.049243"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:42.105736" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.105263" elapsed="0.048671"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:42.154394" level="INFO">Typing text '2' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.154147" elapsed="0.036541"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-05-02T16:40:42.104820" elapsed="0.085994"/>
+</kw>
+<kw name="Add Yoga Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:40:42.191727" level="INFO">${yoga_locations} = ['Japan', 'Malta', 'Portugal', 'Spain', 'Tuscany']</msg>
+<var>${yoga_locations}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.191567" elapsed="0.000180"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:42.192148" level="INFO">${yoga_locator} = //*[@id="product-61"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.192016" elapsed="0.000150"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:40:52.434943" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:40:52.435076" level="FAIL">Element '//*[@id="product-61"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:40:42.192538" elapsed="10.242634">Element '//*[@id="product-61"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:40:52.435302" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:40:42.192257" elapsed="10.243061"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:52.435595" elapsed="0.000023"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:40:52.435701" elapsed="0.000015"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:40:52.435400" elapsed="0.000336"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:40:52.435965" level="INFO">Element 'Japan' not visible after 10 seconds.</msg>
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:40:52.435824" elapsed="0.000177"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:40:52.435758" elapsed="0.000276"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:40:52.435381" elapsed="0.000673"/>
+</if>
+<var name="${yoga_location}">Japan</var>
+<status status="PASS" start="2024-05-02T16:40:42.191942" elapsed="10.244127"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:40:52.436432" level="INFO">${yoga_locator} = //*[@id="product-62"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:40:52.436283" elapsed="0.000167"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:02.578197" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:41:02.578338" level="FAIL">Element '//*[@id="product-62"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:40:52.436650" elapsed="10.141908">Element '//*[@id="product-62"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:41:02.578710" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:40:52.436539" elapsed="10.142189"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:02.579021" elapsed="0.000026"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:02.579132" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:02.578818" elapsed="0.000353"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:02.579408" level="INFO">Element 'Malta' not visible after 10 seconds.</msg>
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:02.579266" elapsed="0.000179"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:02.579195" elapsed="0.000284"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:02.578799" elapsed="0.000702"/>
+</if>
+<var name="${yoga_location}">Malta</var>
+<status status="PASS" start="2024-05-02T16:40:52.436198" elapsed="10.143318"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:02.579953" level="INFO">${yoga_locator} = //*[@id="product-53"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:02.579792" elapsed="0.000180"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:12.711910" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:41:12.712083" level="FAIL">Element '//*[@id="product-53"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:41:02.580196" elapsed="10.132010">Element '//*[@id="product-53"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:41:12.712366" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:02.580069" elapsed="10.132314"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:12.712849" elapsed="0.000034"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:12.713238" elapsed="0.000039"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:12.712634" elapsed="0.000685"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:12.713800" level="INFO">Element 'Portugal' not visible after 10 seconds.</msg>
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:12.713474" elapsed="0.000364"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:12.713355" elapsed="0.000518"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:12.712605" elapsed="0.001289"/>
+</if>
+<var name="${yoga_location}">Portugal</var>
+<status status="PASS" start="2024-05-02T16:41:02.579699" elapsed="10.134210"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:12.714314" level="INFO">${yoga_locator} = //*[@id="product-60"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:12.714130" elapsed="0.000203"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:12.714551" elapsed="0.013548"/>
+</kw>
+<msg time="2024-05-02T16:41:12.728226" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:12.714431" elapsed="0.013813"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:12.728675" level="INFO">Clicking element '//*[@id="product-60"]/div[2]/form/button'.</msg>
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:12.728501" elapsed="4.230490"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:41:16.959384" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:41:16.959236" elapsed="0.000207"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:12.728320" elapsed="4.231163"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:16.959620" elapsed="0.000019"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:16.959518" elapsed="0.000148"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:12.728304" elapsed="4.231383"/>
+</if>
+<var name="${yoga_location}">Spain</var>
+<status status="PASS" start="2024-05-02T16:41:12.714040" elapsed="4.245667"/>
+</iter>
+<var>${yoga_location}</var>
+<value>@{yoga_locations}</value>
+<status status="PASS" start="2024-05-02T16:40:42.191802" elapsed="34.767959"/>
+</for>
+<status status="PASS" start="2024-05-02T16:40:42.191291" elapsed="34.768544"/>
+</kw>
+<kw name="Go To Cart Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:16.960582" level="INFO">Clicking element 'id=menu-item-200'.</msg>
+<arg>${CART_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:16.960418" elapsed="2.239491"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:19.204462" level="INFO">Page title is 'Koszyk – FakeStore'.</msg>
+<arg>Koszyk – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.200151" elapsed="0.004396"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:19.208181" level="INFO">Current location is 'https://fakestore.testelka.pl/koszyk/'.</msg>
+<arg>${CART_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.204711" elapsed="0.003552"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:19.208511" level="INFO">Redirected to Cart Page</msg>
+<arg>Redirected to Cart Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.208409" elapsed="0.000132"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:16.960182" elapsed="2.248414"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:19.310544" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/cart_test1.png"&gt;&lt;img src="Screenshots/cart_test1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/cart_test1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.208947" elapsed="0.101841"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.311722" elapsed="0.075857"/>
+</kw>
+<doc>This test case verifies the functionality of adding climbing and yoga products to the cart.</doc>
+<tag>cart</tag>
+<status status="PASS" start="2024-05-02T16:39:58.437338" elapsed="80.950660"/>
+</test>
+<test id="s1-t2" name="Adding To Cart Functionality Test 2" line="33">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:19.389523" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:19.389323" elapsed="2.765228"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:41:22.155002" elapsed="0.120508"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:22.287356" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:22.275753" elapsed="0.011713"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:19.389060" elapsed="2.898534"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:22.288538" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:22.288323" elapsed="0.950590"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:23.241010" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:23.239138" elapsed="0.001944"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:23.244254" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:23.241226" elapsed="0.003130"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:23.244717" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:23.244566" elapsed="0.000190"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:22.288005" elapsed="0.956808"/>
+</kw>
+<kw name="Click On Windsurfing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WINDSURFING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:23.245831" elapsed="0.024921"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:23.271192" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[1]/a'.</msg>
+<arg>${WINDSURFING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:23.270963" elapsed="0.956953"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:24.239780" level="INFO">Page title is 'Windsurfing – FakeStore'.</msg>
+<arg>Windsurfing – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.228153" elapsed="0.011752"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:24.244615" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/windsurfing/'.</msg>
+<arg>${WINDSERFING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.240095" elapsed="0.004625"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:24.245339" level="INFO">Clicked on Windsurfing Category</msg>
+<arg>Clicked on Windsurfing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.244999" elapsed="0.000385"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:23.245589" elapsed="0.999864"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.246178" elapsed="0.031918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:24.278616" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.278317" elapsed="0.078645"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:24.245814" elapsed="0.111281"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:24.358417" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[4]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.357909" elapsed="0.000547"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:24.361317" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[4]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.360226" elapsed="1.264557"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:41:24.359916" elapsed="1.265099"/>
+</kw>
+<arg>date</arg>
+<status status="PASS" start="2024-05-02T16:41:24.357592" elapsed="1.267573"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:25.626875" level="INFO">${product_locator} = //*[@id="main"]/ul/li[3]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:25.626557" elapsed="0.000354"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:25.627660" level="INFO">Clicking element '//*[@id="main"]/ul/li[3]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:25.627424" elapsed="4.718115"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:41:25.627103" elapsed="4.718546"/>
+</kw>
+<arg>third_product</arg>
+<status status="PASS" start="2024-05-02T16:41:25.625877" elapsed="4.719925"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:30.347100" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.346873" elapsed="0.082082"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:30.346490" elapsed="0.082752"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:30.430640" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.430138" elapsed="0.074772"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:30.505374" level="INFO">Typing text '3' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.505124" elapsed="0.051075"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2024-05-02T16:41:30.429836" elapsed="0.126498"/>
+</kw>
+<kw name="Add Windsurfing Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:41:30.557182" level="INFO">${windserfing_locations} = ['Egipt', 'Fuerteventura', 'Greece', 'Karpathos', 'Lanzarote', 'Sal']</msg>
+<var>${windserfing_locations}</var>
+<arg>${ADD_WINDSERFING_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.557017" elapsed="0.000186"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:30.557668" level="INFO">${windserfing_locator} = //*[@id="product-386"]/div[2]/form/button</msg>
+<var>${windserfing_locator}</var>
+<arg>${ADD_WINDSERFING_LOCATORS}</arg>
+<arg>${windserfing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.557523" elapsed="0.000164"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:40.728423" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:41:40.728576" level="FAIL">Element '//*[@id="product-386"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:41:30.557947" elapsed="10.170745">Element '//*[@id="product-386"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:41:40.728826" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:30.557780" elapsed="10.171062"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${windserfing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:40.729170" elapsed="0.000023"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:40.729277" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:40.728961" elapsed="0.000353"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:40.729694" level="INFO">Element 'Egipt' not visible after 10 seconds.</msg>
+<arg>Element '${windserfing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:40.729407" elapsed="0.000323"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:40.729336" elapsed="0.000425"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:40.728935" elapsed="0.000844"/>
+</if>
+<var name="${windserfing_location}">Egipt</var>
+<status status="PASS" start="2024-05-02T16:41:30.557438" elapsed="10.172354"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:40.730166" level="INFO">${windserfing_locator} = //*[@id="product-393"]/div[2]/form/button</msg>
+<var>${windserfing_locator}</var>
+<arg>${ADD_WINDSERFING_LOCATORS}</arg>
+<arg>${windserfing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:40.730014" elapsed="0.000169"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:51.004130" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:41:51.004267" level="FAIL">Element '//*[@id="product-393"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:41:40.730383" elapsed="10.273980">Element '//*[@id="product-393"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:41:51.004512" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:40.730271" elapsed="10.274262"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${windserfing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:51.004822" elapsed="0.000024"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:51.004933" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:51.004626" elapsed="0.000347"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:51.005209" level="INFO">Element 'Fuerteventura' not visible after 10 seconds.</msg>
+<arg>Element '${windserfing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:51.005068" elapsed="0.000176"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:51.004997" elapsed="0.000278"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:51.004606" elapsed="0.000688"/>
+</if>
+<var name="${windserfing_location}">Fuerteventura</var>
+<status status="PASS" start="2024-05-02T16:41:40.729937" elapsed="10.275371"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:51.005709" level="INFO">${windserfing_locator} = //*[@id="product-391"]/div[2]/form/button</msg>
+<var>${windserfing_locator}</var>
+<arg>${ADD_WINDSERFING_LOCATORS}</arg>
+<arg>${windserfing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:51.005553" elapsed="0.000173"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:51.005926" elapsed="0.012559"/>
+</kw>
+<msg time="2024-05-02T16:41:51.018638" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${windserfing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:51.005815" elapsed="0.012843"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:51.019196" level="INFO">Clicking element '//*[@id="product-391"]/div[2]/form/button'.</msg>
+<arg>${windserfing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:51.019003" elapsed="1.591917"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:41:52.611313" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:41:52.611169" elapsed="0.000208"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:51.018793" elapsed="1.592624"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${windserfing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:41:52.611550" elapsed="0.000021"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:41:52.611447" elapsed="0.000152"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:51.018773" elapsed="1.592845"/>
+</if>
+<var name="${windserfing_location}">Greece</var>
+<status status="PASS" start="2024-05-02T16:41:51.005458" elapsed="1.606179"/>
+</iter>
+<var>${windserfing_location}</var>
+<value>@{windserfing_locations}</value>
+<status status="PASS" start="2024-05-02T16:41:30.557276" elapsed="22.054392"/>
+</for>
+<status status="PASS" start="2024-05-02T16:41:30.556759" elapsed="22.054971"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:52.612765" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:52.612584" elapsed="1.126271"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:53.741380" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.739137" elapsed="0.002324"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:53.743187" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.741615" elapsed="0.001641"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:53.743547" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.743422" elapsed="0.000160"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:52.612178" elapsed="1.131462"/>
+</kw>
+<kw name="Click On Sailing Category" owner="CartKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:53.744603" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 200);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.744336" elapsed="0.003204"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAILING_CATEGORY_XPATH}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.747672" elapsed="0.013259"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:53.761769" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[4]/a'.</msg>
+<arg>${SAILING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:53.761408" elapsed="0.775626"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:54.551588" level="INFO">Page title is 'Żeglarstwo – FakeStore'.</msg>
+<arg>Żeglarstwo – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.537265" elapsed="0.014427"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:54.554070" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/zeglarstwo/'.</msg>
+<arg>${SAILING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.551883" elapsed="0.002255"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:41:54.554531" level="INFO">Clicked on Sailing Category</msg>
+<arg>Clicked on Sailing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.554406" elapsed="0.000158"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:53.744099" elapsed="0.810523"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.555964" elapsed="0.011163"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:54.567568" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.567341" elapsed="0.078780"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:54.555033" elapsed="0.091312"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:54.650571" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[6]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.650347" elapsed="0.000252"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:54.651067" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[6]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.650916" elapsed="1.702743"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:41:54.650716" elapsed="1.703097"/>
+</kw>
+<arg>price_desc</arg>
+<status status="PASS" start="2024-05-02T16:41:54.649897" elapsed="1.703994"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:56.356194" level="INFO">${product_locator} = //*[@id="main"]/ul/li[1]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:56.355934" elapsed="0.000285"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:56.356700" level="INFO">Clicking element '//*[@id="main"]/ul/li[1]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:56.356548" elapsed="2.445395"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:41:56.356349" elapsed="2.445697"/>
+</kw>
+<arg>first_product</arg>
+<status status="PASS" start="2024-05-02T16:41:56.355598" elapsed="2.446787"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:58.804496" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.804264" elapsed="0.078253"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:58.803901" elapsed="0.078776"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:58.884581" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.884043" elapsed="0.062682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:58.947196" level="INFO">Typing text '4' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.946944" elapsed="0.046665"/>
+</kw>
+<arg>4</arg>
+<status status="PASS" start="2024-05-02T16:41:58.883543" elapsed="0.110194"/>
+</kw>
+<kw name="Add Sailing Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:41:58.994763" level="INFO">${sailing_locations} = ['Masuria']</msg>
+<var>${sailing_locations}</var>
+<arg>${ADD_SAILING_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.994600" elapsed="0.000185"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:41:58.995255" level="INFO">${sailing_locator} = //*[@id="product-46"]/div[2]/form/button</msg>
+<var>${sailing_locator}</var>
+<arg>${ADD_SAILING_LOCATORS}</arg>
+<arg>${sailing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.995055" elapsed="0.000222"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${sailing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.995491" elapsed="0.022108"/>
+</kw>
+<msg time="2024-05-02T16:41:59.017774" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${sailing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:41:58.995374" elapsed="0.022420"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:41:59.018283" level="INFO">Clicking element '//*[@id="product-46"]/div[2]/form/button'.</msg>
+<arg>${sailing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:41:59.018089" elapsed="1.595537"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:42:00.613967" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:42:00.613839" elapsed="0.000184"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:41:59.017880" elapsed="1.596179"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${sailing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:00.614187" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:00.614091" elapsed="0.000140"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:41:59.017862" elapsed="1.596388"/>
+</if>
+<var name="${sailing_location}">Masuria</var>
+<status status="PASS" start="2024-05-02T16:41:58.994979" elapsed="1.619289"/>
+</iter>
+<var>${sailing_location}</var>
+<value>@{sailing_locations}</value>
+<status status="PASS" start="2024-05-02T16:41:58.994839" elapsed="1.619460"/>
+</for>
+<status status="PASS" start="2024-05-02T16:41:58.994333" elapsed="1.620025"/>
+</kw>
+<kw name="Go To Cart Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:00.615312" level="INFO">Clicking element 'id=menu-item-200'.</msg>
+<arg>${CART_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:00.615151" elapsed="1.532107"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:02.151264" level="INFO">Page title is 'Koszyk – FakeStore'.</msg>
+<arg>Koszyk – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.147604" elapsed="0.003733"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:02.153365" level="INFO">Current location is 'https://fakestore.testelka.pl/koszyk/'.</msg>
+<arg>${CART_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.151479" elapsed="0.001943"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:02.153640" level="INFO">Redirected to Cart Page</msg>
+<arg>Redirected to Cart Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.153547" elapsed="0.000121"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:00.614919" elapsed="1.538799"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:02.243048" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/cart_test2.png"&gt;&lt;img src="Screenshots/cart_test2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/cart_test2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.154037" elapsed="0.089111"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.243632" elapsed="0.059834"/>
+</kw>
+<doc>This test case verifies the functionality of adding windsurfing and sailing products to the cart.</doc>
+<tag>cart</tag>
+<status status="PASS" start="2024-05-02T16:41:19.388542" elapsed="42.915399"/>
+</test>
+<test id="s1-t3" name="Adding To Cart Functionality Test 3" line="57">
+<kw name="Open Browser To FakeStore Page" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:02.324797" level="INFO">Opening browser 'Chrome' to base url 'https://fakestore.testelka.pl'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:02.324554" elapsed="2.276383"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T16:42:04.601305" elapsed="0.106530"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:04.748351" level="INFO">Page title is 'FakeStore – Sklep do nauki testowania'.</msg>
+<arg>FakeStore – Sklep do nauki testowania</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:04.708292" elapsed="0.040177"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:02.309837" elapsed="2.438768"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:04.749545" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:04.749329" elapsed="0.820583"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:05.573737" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:05.570155" elapsed="0.003731"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:05.579142" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:05.574158" elapsed="0.005159"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:05.580065" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:05.579731" elapsed="0.000452"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:04.749011" elapsed="0.831355"/>
+</kw>
+<kw name="Click On Yoga Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YOGA_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:05.582285" elapsed="0.016113"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:05.599086" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[3]/a'.</msg>
+<arg>${YOGA_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:05.598859" elapsed="0.893848"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:06.496186" level="INFO">Page title is 'Yoga i pilates – FakeStore'.</msg>
+<arg>Yoga i pilates – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.492950" elapsed="0.003327"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:06.511030" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/yoga-i-pilates/'.</msg>
+<arg>${YOGA_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.496471" elapsed="0.014697"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:06.511578" level="INFO">Clicked on Yoga Category</msg>
+<arg>Clicked on Yoga Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.511433" elapsed="0.000182"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:05.581279" elapsed="0.930398"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.512263" elapsed="0.014483"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:06.527178" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.526953" elapsed="0.090122"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:06.512020" elapsed="0.105183"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:06.618175" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[3]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.617925" elapsed="0.000284"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:06.619203" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[3]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.618943" elapsed="1.387446"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:42:06.618352" elapsed="1.388144"/>
+</kw>
+<arg>rating</arg>
+<status status="PASS" start="2024-05-02T16:42:06.617532" elapsed="1.389032"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:08.008494" level="INFO">${product_locator} = //*[@id="main"]/ul/li[5]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:08.008088" elapsed="0.000447"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:08.009093" level="INFO">Clicking element '//*[@id="main"]/ul/li[5]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:08.008936" elapsed="5.319774"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:42:08.008704" elapsed="5.320130"/>
+</kw>
+<arg>fifth_product</arg>
+<status status="PASS" start="2024-05-02T16:42:08.007544" elapsed="5.321700"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:13.330561" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.330349" elapsed="0.093174"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:13.329776" elapsed="0.093905"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:13.425593" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.424780" elapsed="0.055875"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:13.481660" level="INFO">Typing text '2' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.480868" elapsed="0.073571"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-05-02T16:42:13.424345" elapsed="0.130221"/>
+</kw>
+<kw name="Add Yoga Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:42:13.556360" level="INFO">${yoga_locations} = ['Japan', 'Malta', 'Portugal', 'Spain', 'Tuscany']</msg>
+<var>${yoga_locations}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.556186" elapsed="0.000196"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:13.557164" level="INFO">${yoga_locator} = //*[@id="product-61"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.556714" elapsed="0.000481"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:23.765783" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:42:23.765948" level="FAIL">Element '//*[@id="product-61"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:42:13.557481" elapsed="10.208587">Element '//*[@id="product-61"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:42:23.766206" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:42:13.557340" elapsed="10.208882"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:23.766527" elapsed="0.000025"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:23.766638" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:23.766321" elapsed="0.000364"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:23.767121" level="INFO">Element 'Japan' not visible after 10 seconds.</msg>
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:23.766952" elapsed="0.000211"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:23.766712" elapsed="0.000487"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:42:23.766298" elapsed="0.000924"/>
+</if>
+<var name="${yoga_location}">Japan</var>
+<status status="PASS" start="2024-05-02T16:42:13.556623" elapsed="10.210614"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:23.767595" level="INFO">${yoga_locator} = //*[@id="product-62"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:23.767447" elapsed="0.000165"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:34.017368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:42:34.017501" level="FAIL">Element '//*[@id="product-62"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:42:23.767816" elapsed="10.249782">Element '//*[@id="product-62"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:42:34.017728" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:42:23.767702" elapsed="10.250042"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:34.018084" elapsed="0.000039"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:34.018253" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:34.017828" elapsed="0.000491"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:34.018682" level="INFO">Element 'Malta' not visible after 10 seconds.</msg>
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:34.018431" elapsed="0.000306"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:34.018348" elapsed="0.000433"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:42:34.017809" elapsed="0.000996"/>
+</if>
+<var name="${yoga_location}">Malta</var>
+<status status="PASS" start="2024-05-02T16:42:23.767372" elapsed="10.251447"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:34.019357" level="INFO">${yoga_locator} = //*[@id="product-53"]/div[2]/form/button</msg>
+<var>${yoga_locator}</var>
+<arg>${ADD_YOGA_LOCATORS}</arg>
+<arg>${yoga_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:34.019183" elapsed="0.000191"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:34.019586" elapsed="0.014368"/>
+</kw>
+<msg time="2024-05-02T16:42:34.034102" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${yoga_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:42:34.019469" elapsed="0.014653"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:34.034599" level="INFO">Clicking element '//*[@id="product-53"]/div[2]/form/button'.</msg>
+<arg>${yoga_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:34.034406" elapsed="1.444212"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:42:35.478960" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:42:35.478826" elapsed="0.000427"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:34.034208" elapsed="1.445114"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${yoga_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:35.479477" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:35.479355" elapsed="0.000172"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:42:34.034189" elapsed="1.445358"/>
+</if>
+<var name="${yoga_location}">Portugal</var>
+<status status="PASS" start="2024-05-02T16:42:34.018960" elapsed="1.460607"/>
+</iter>
+<var>${yoga_location}</var>
+<value>@{yoga_locations}</value>
+<status status="PASS" start="2024-05-02T16:42:13.556456" elapsed="21.923142"/>
+</for>
+<status status="PASS" start="2024-05-02T16:42:13.555833" elapsed="21.923831"/>
+</kw>
+<kw name="Go To Shop Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:35.480383" level="INFO">Clicking element 'id=menu-item-198'.</msg>
+<arg>${SHOP_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:35.480211" elapsed="1.097653"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:36.593591" level="INFO">Page title is 'Sklep – FakeStore'.</msg>
+<arg>Sklep – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:36.578152" elapsed="0.015520"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:36.596557" level="INFO">Current location is 'https://fakestore.testelka.pl/shop/'.</msg>
+<arg>${SHOP_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:36.593840" elapsed="0.002779"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:36.596859" level="INFO">Redirected to Shop Page</msg>
+<arg>Redirected to Shop Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:36.596760" elapsed="0.000130"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:35.479975" elapsed="1.116970"/>
+</kw>
+<kw name="Click On Climbing Category" owner="CartKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:36.597408" elapsed="0.012211"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:36.610024" level="INFO">Clicking element 'xpath=//*[@id="main"]/ul/li[2]/a'.</msg>
+<arg>${CLIMBING_CATEGORY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:36.609817" elapsed="0.855400"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:37.470899" level="INFO">Page title is 'Wspinaczka – FakeStore'.</msg>
+<arg>Wspinaczka – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.465429" elapsed="0.005559"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:37.473107" level="INFO">Current location is 'https://fakestore.testelka.pl/product-category/wspinaczka/'.</msg>
+<arg>${CLIMBING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.471157" elapsed="0.002031"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:37.473455" level="INFO">Clicked on Climbing Category</msg>
+<arg>Clicked on Climbing Category</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.473350" elapsed="0.000142"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:36.597197" elapsed="0.876349"/>
+</kw>
+<kw name="Locate Sorting Box" owner="SortKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.474095" elapsed="0.008582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:37.483049" level="INFO">Clicking element 'name=orderby'.</msg>
+<arg>${ORDERBY_FORM_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.482851" elapsed="0.058285"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:37.473889" elapsed="0.067517"/>
+</kw>
+<kw name="Select Sort Option" owner="SortKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:37.543222" level="INFO">${sort_locator} = //*[@id="main"]/div[1]/form/select/option[5]</msg>
+<var>${sort_locator}</var>
+<arg>${SORT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.542679" elapsed="0.000610"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:37.544725" level="INFO">Clicking element '//*[@id="main"]/div[1]/form/select/option[5]'.</msg>
+<arg>${sort_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.544286" elapsed="1.406125"/>
+</kw>
+<arg>'${sort_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${sort_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option:</arg>
+<arg>${select_option}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:42:37.543662" elapsed="1.406881"/>
+</kw>
+<arg>price_asc</arg>
+<status status="PASS" start="2024-05-02T16:42:37.541902" elapsed="1.408711"/>
+</kw>
+<kw name="Select Product By Order" owner="CartKeywords">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:38.951376" level="INFO">${product_locator} = //*[@id="main"]/ul/li[3]/a[1]</msg>
+<var>${product_locator}</var>
+<arg>${SELECT_PRODUCT_LOCATORS}</arg>
+<arg>${select_option}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:38.951183" elapsed="0.000214"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:38.951937" level="INFO">Clicking element '//*[@id="main"]/ul/li[3]/a[1]'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:38.951752" elapsed="8.624099"/>
+</kw>
+<arg>'${product_locator}' != 'None'</arg>
+<arg>Click Element</arg>
+<arg>${product_locator}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>No locator found for option: ${select_option}</arg>
+<arg>Scroll Page Down If Element Not Visible</arg>
+<arg>${product_locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-02T16:42:38.951528" elapsed="8.624449"/>
+</kw>
+<arg>third_product</arg>
+<status status="PASS" start="2024-05-02T16:42:38.950903" elapsed="8.625150"/>
+</kw>
+<kw name="Locate and Click Quantity Input Field" owner="CartKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:47.576865" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.576680" elapsed="0.051245"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:47.576408" elapsed="0.051645"/>
+</kw>
+<kw name="Clear and Enter Quantity" owner="CartKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:47.629473" level="INFO">Typing text '' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.628766" elapsed="0.064727"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:47.693968" level="INFO">Typing text '5' into text field 'xpath=/html/body/div[2]/div[2]/div/div[2]/main/div[2]/div[2]/form/div/input'.</msg>
+<arg>${QUANTITY_INPUT_XPATH}</arg>
+<arg>${quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.693713" elapsed="0.040833"/>
+</kw>
+<arg>5</arg>
+<status status="PASS" start="2024-05-02T16:42:47.628486" elapsed="0.106189"/>
+</kw>
+<kw name="Add Climbing Products To Cart" owner="CartKeywords">
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2024-05-02T16:42:47.735614" level="INFO">${climbing_locations} = ['Gran_Koscielcow', 'Island_Peak', 'Via_Ferraty']</msg>
+<var>${climbing_locations}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.735453" elapsed="0.000181"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:47.736072" level="INFO">${climbing_locator} = //*[@id="product-4114"]/div[2]/form/button</msg>
+<var>${climbing_locator}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<arg>${climbing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.735928" elapsed="0.000163"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:57.896272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-02T16:42:57.896648" level="FAIL">Element '//*[@id="product-4114"]/div[2]/form/button' not visible after 10 seconds.</msg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-02T16:42:47.736306" elapsed="10.160460">Element '//*[@id="product-4114"]/div[2]/form/button' not visible after 10 seconds.</status>
+</kw>
+<msg time="2024-05-02T16:42:57.896912" level="INFO">${button_visible} = False</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:42:47.736184" elapsed="10.160744"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${climbing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:57.897241" elapsed="0.000021"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:57.897346" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:57.897025" elapsed="0.000359"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:42:57.897618" level="INFO">Element 'Gran_Koscielcow' not visible after 10 seconds.</msg>
+<arg>Element '${climbing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:42:57.897474" elapsed="0.000178"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:57.897407" elapsed="0.000278"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:42:57.897003" elapsed="0.000701"/>
+</if>
+<var name="${climbing_location}">Gran_Koscielcow</var>
+<status status="PASS" start="2024-05-02T16:42:47.735845" elapsed="10.162096"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-05-02T16:42:57.898388" level="INFO">${climbing_locator} = //*[@id="product-42"]/div[2]/form/button</msg>
+<var>${climbing_locator}</var>
+<arg>${ADD_CLIMBING_LOCATORS}</arg>
+<arg>${climbing_location}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-05-02T16:42:57.898214" elapsed="0.000191"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T16:42:57.898617" elapsed="0.014532"/>
+</kw>
+<msg time="2024-05-02T16:42:57.913291" level="INFO">${button_visible} = True</msg>
+<var>${button_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${climbing_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-02T16:42:57.898499" elapsed="0.014812"/>
+</kw>
+<if>
+<branch type="IF" condition="'${button_visible}' == 'True'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:57.913774" level="INFO">Clicking element '//*[@id="product-42"]/div[2]/form/button'.</msg>
+<arg>${climbing_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:57.913586" elapsed="1.655185"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2024-05-02T16:42:59.569129" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2024-05-02T16:42:59.568997" elapsed="0.000191"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:57.913392" elapsed="1.655834"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Element '${climbing_location}' not visible after 10 seconds.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-02T16:42:59.569360" elapsed="0.000020"/>
+</kw>
+<status status="NOT RUN" start="2024-05-02T16:42:59.569259" elapsed="0.000147"/>
+</branch>
+<status status="PASS" start="2024-05-02T16:42:57.913375" elapsed="1.656051"/>
+</if>
+<var name="${climbing_location}">Island_Peak</var>
+<status status="PASS" start="2024-05-02T16:42:57.898115" elapsed="1.671330"/>
+</iter>
+<var>${climbing_location}</var>
+<value>@{climbing_locations}</value>
+<status status="PASS" start="2024-05-02T16:42:47.735691" elapsed="11.833785"/>
+</for>
+<status status="PASS" start="2024-05-02T16:42:47.735200" elapsed="11.834342"/>
+</kw>
+<kw name="Go To Cart Page" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:42:59.570266" level="INFO">Clicking element 'id=menu-item-200'.</msg>
+<arg>${CART_LINK_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T16:42:59.570100" elapsed="1.475385"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:43:01.050218" level="INFO">Page title is 'Koszyk – FakeStore'.</msg>
+<arg>Koszyk – FakeStore</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-02T16:43:01.045874" elapsed="0.004429"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:43:01.052968" level="INFO">Current location is 'https://fakestore.testelka.pl/koszyk/'.</msg>
+<arg>${CART_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T16:43:01.050460" elapsed="0.002574"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T16:43:01.053375" level="INFO">Redirected to Cart Page</msg>
+<arg>Redirected to Cart Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T16:43:01.053162" elapsed="0.000248"/>
+</kw>
+<status status="PASS" start="2024-05-02T16:42:59.569860" elapsed="1.483608"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-02T16:43:01.142766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/cart_test3.png"&gt;&lt;img src="Screenshots/cart_test3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshots/cart_test3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-02T16:43:01.053697" elapsed="0.089167"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T16:43:01.143322" elapsed="0.067629"/>
+</kw>
+<doc>This test case verifies the functionality of adding yoga and climbing products to the cart.</doc>
+<tag>cart</tag>
+<status status="PASS" start="2024-05-02T16:42:02.304294" elapsed="58.906872"/>
+</test>
+<doc>Test Case: Adding To Cart Functionality
+Title: Verify if a user can successfully add products to the cart.</doc>
+<status status="PASS" start="2024-05-02T16:39:58.345423" elapsed="182.866261"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">cart</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCase003">TestCase003</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
