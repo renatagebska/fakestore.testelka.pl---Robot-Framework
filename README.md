@@ -1,8 +1,15 @@
 # fakestore.testelka.pl-Robot-Framework
 ## Automation of Test Cases using Robot Framework and Selenium Library
+This repository contains functional tests for various functionalities of the FakeStore website including user registration, login, adding products, sorting, and selecting products. The tests are written using Selenium WebDriver and include both pytest and unittest frameworks for test execution.
+
+## Table of Contents
+
+- [Test Cases](#test-cases)
+- [Project Structure](#project-structure)
+- [Setup](#setup)
+- [Running Tests](#running-tests)
 
 ## Test Cases:
-
 
 ### Test Case: User Registration Functionality
 ### ID: 001
@@ -59,7 +66,6 @@ After clicking the "Register" button, an error message requesting the email addr
 After clicking the "Register" button, an error message requesting the password should appear.
 
 ---
-
 
 ### Test Case: Login Functionality
 ### ID: 002
@@ -433,3 +439,4 @@ Upon selecting the ascending price sorting option, the product prices on the pag
 
 #### Expected Results:
 Upon selecting the descending price sorting option, the product prices on the page should be ordered from highest to lowest.
+
