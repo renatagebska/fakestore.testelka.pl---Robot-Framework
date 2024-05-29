@@ -518,3 +518,23 @@ venv\Scripts\activate
 ```sh
 pip install -r requirements.txt
 ```
+### Ensure you have the Chrome WebDriver installed and it's in your PATH. You can download it [here](https://developer.chrome.com/docs/chromedriver/downloads?hl=pl).
+
+## Running Tests
+##### Use the `robot` command to execute the test cases. You can specify individual test case files or directories containing multiple test case files. For example:
+
+    ```sh
+    robot TestCase001.robot
+    ```
+    This command runs the test case file `TestCase001.robot`.
+
+    ```sh
+    robot Tests/
+    ```
+    This command runs all test case files in the `Tests` directory.
+
+##### To run Robot Framework tests and specify the output directory, use the following command:
+
+```sh
+robot --outputdir Results Tests/
+```
