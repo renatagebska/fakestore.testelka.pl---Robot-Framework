@@ -493,7 +493,7 @@ Upon selecting the descending price sorting option, the product prices on the pa
 ### Clone the repository:
 
 ```sh
-git clone https://github.com/renatagebska/fakestore.testelka.pl---Robot-Framework
+git clone git clone https://github.com/renatagebska/fakestore.testelka.pl---Robot-Framework
 cd fakestore.testelka.pl---Robot-Framework
 ```
 
