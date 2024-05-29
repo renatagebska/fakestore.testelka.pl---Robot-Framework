@@ -1,6 +1,6 @@
 # fakestore.testelka.pl-Robot-Framework
 ## Automation of Test Cases using Robot Framework and Selenium Library
-This repository contains functional tests for various functionalities of the FakeStore website including user registration, login, adding products, sorting, and selecting products. The tests are written using Robot Framework and Selenium Library.
+This repository contains functional tests for various functionalities of the FakeStore website including user registration, login, adding products, sorting, and order checkout functionality. The tests are written using Robot Framework and Selenium Library.
 
 ## Table of Contents
 
@@ -65,14 +65,11 @@ After clicking the "Register" button, an error message requesting the email addr
 #### Expected Results:
 After clicking the "Register" button, an error message requesting the password should appear.
 
----
-
 ### Test Case: Login Functionality
 ### ID: 002
 
 ### Test 1, 2, 3
 ### Title: Verify if a user can successfully log in using correct login credentials.
-
 
 #### Steps:
 * Open the Chrome browser.
@@ -137,8 +134,6 @@ After clicking the "Login" button, an error message requesting the password shou
 
 #### Expected Results:
 After clicking the "Login" button, an error message requesting correct login data should appear.
-
----
 
 ### Test Case: Adding to Cart Functionality
 ### ID: 003
@@ -246,8 +241,6 @@ After clicking the "Login" button, an error message requesting correct login dat
 * Steps 12-19: The third displayed product from the "Climbing" category sorted by price: low to high, in quantity of 5 should be added to the cart.
 * Step 19: The cart contents should be displayed.
 * Step 20: The browser should close.
-
----
 
 ### Test Case: Order Checkout Process
 ### ID: 004
@@ -390,8 +383,6 @@ After clicking the "Login" button, an error message requesting correct login dat
 * Steps 20-21: Proceed to the payment section where the user should enter valid payment details, leaving the CVC code field empty.
 * Step 22: An error message should appear prompting the user to enter the CVC code.
 * Step 23: The browser should close.
-
----
 
 ### Test Case: Product Sorting Functionality
 ### ID: 005
