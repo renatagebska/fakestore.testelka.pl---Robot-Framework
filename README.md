@@ -431,3 +431,90 @@ Upon selecting the ascending price sorting option, the product prices on the pag
 #### Expected Results:
 Upon selecting the descending price sorting option, the product prices on the page should be ordered from highest to lowest.
 
+## Project Structure
+
+```plaintext
+.
+├── Resources
+│   ├── Keywords
+│   │   ├── CartKeywords.robot
+│   │   ├── CheckoutKeywords.robot
+│   │   ├── CommonKeywords.robot
+│   │   ├── LoginKeywords.robot
+│   │   ├── RegistrationKeywords.robot
+│   │   └── SortKeywords.robot
+│   ├── Variables
+│   │   ├── CartVariables.robot
+│   │   ├── CheckoutVariables.robot
+│   │   ├── CommonVariables.robot
+│   │   ├── LoginVariables.robot
+│   │   ├── ProductsVariables.robot
+│   │   ├── RegistrationVariables.robot
+│   │   └── SortVariables.robot
+├── Results
+│   ├── TestCase001
+│   │   ├── Screenshots
+│   │   ├── log.html
+│   │   ├── output.xml
+│   │   └── report.html
+│   ├── TestCase002
+│   │   ├── Screenshots
+│   │   ├── log.html
+│   │   ├── output.xml
+│   │   └── report.html
+│   ├── TestCase003
+│   │   ├── Screenshots
+│   │   ├── log.html
+│   │   ├── output.xml
+│   │   └── report.html
+│   ├── TestCase004
+│   │   ├── Screenshots
+│   │   ├── log.html
+│   │   ├── output.xml
+│   │   └── report.html
+│   └── TestCase005
+│       ├── Screenshots
+│       ├── log.html
+│       ├── output.xml
+│       └── report.html
+├── Tests
+│   ├── chromedriver.exe
+│   ├── TestCase001.robot
+│   ├── TestCase002.robot
+│   ├── TestCase003.robot
+│   ├── TestCase004.robot
+│   └── TestCase005.robot
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+## Setup
+
+### Clone the repository:
+
+```sh
+git clone https://github.com/renatagebska/fakestore.testelka.pl---Robot-Framework
+cd fakestore.testelka.pl---Robot-Framework
+```
+
+### Create a virtual environment and activate it:
+##### macOS i Linux:
+```sh
+# Creating the virtual environment
+python3 -m venv venv
+
+# Activating the virtual environment
+source venv/bin/activate
+```
+##### Windows
+```sh
+# Creating the virtual environment
+python -m venv venv
+
+# Activating the virtual environment
+venv\Scripts\activate
+```
+### Install the required packages:
+```sh
+pip install -r requirements.txt
+```
